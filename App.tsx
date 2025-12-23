@@ -33,6 +33,9 @@ import { EdTechIndustryPage } from './components/EdTechIndustryPage';
 import { HomeValueProp } from './components/HomeValueProp';
 import ScrollToTop from './components/ScrollToTop';
 import { MobileStickyCTA } from './components/MobileStickyCTA';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { TermsConditions } from './components/TermsConditions';
+import { CookiePolicy } from './components/CookiePolicy';
 
 const HomePage: React.FC = () => (
   <>
@@ -76,6 +79,9 @@ const App: React.FC = () => {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogDetail />} /> 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

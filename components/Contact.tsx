@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Button } from './Button';
 import { MapPin, Mail, Phone, Send, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { siteContent } from '../constants/siteContent';
 
 export const Contact: React.FC = () => {
   useEffect(() => {
@@ -92,7 +94,7 @@ export const Contact: React.FC = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label className="text-sm font-medium text-gray-300">Business Email*</label>
+                                <label className="text-sm font-medium text-gray-300">Email*</label>
                                 <input required type="email" className="w-full px-4 py-3 bg-navy-800 border border-navy-700 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-white placeholder-gray-500 hover:border-navy-600" placeholder="john@company.com" />
                             </div>
                             <div className="space-y-2">
@@ -114,7 +116,7 @@ export const Contact: React.FC = () => {
                         <div className="flex items-start gap-3">
                             <input required type="checkbox" id="terms" className="mt-1 w-4 h-4 rounded border-gray-600 bg-navy-800 text-brand focus:ring-brand focus:ring-offset-navy-900" />
                             <label htmlFor="terms" className="text-sm text-gray-400">
-                                I agree to the <a href="#" className="text-brand hover:text-brand-light underline">Terms and Conditions</a> and <a href="#" className="text-brand hover:text-brand-light underline">Privacy Policy</a>.
+                                I agree to the <a href="/terms-conditions" className="text-brand hover:text-brand-light underline">Terms and Conditions</a> and <a href="/privacy-policy" className="text-brand hover:text-brand-light underline">Privacy Policy</a>.
                             </label>
                         </div>
 

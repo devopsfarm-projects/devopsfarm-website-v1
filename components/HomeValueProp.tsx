@@ -36,15 +36,15 @@ export const HomeValueProp: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-3 text-gray-300">
                         <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></span>
-                        <span>Fragile, "Snowflake" servers that fear reboots</span>
+                        <span>Snowflake servers and risky deployments</span>
                     </li>
                     <li className="flex items-start gap-3 text-gray-300">
                         <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></span>
-                        <span>Security as a blocker at the end of the cycle</span>
+                        <span>Security checks at the end of delivery</span>
                     </li>
                     <li className="flex items-start gap-3 text-gray-300">
                         <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></span>
-                        <span>Surprise cloud bills and wasted resources</span>
+                        <span>Unpredictable cloud spend</span>
                     </li>
                 </ul>
             </div>

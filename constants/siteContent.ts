@@ -22,7 +22,7 @@ export const siteContent = {
     socials: {
       twitter: "https://twitter.com/devopsfarm",
       linkedin: "https://www.linkedin.com/company/devopsfarm",
-      github: "https://github.com/devopsfarm"
+      github: "https://github.com/devopsfarmer"
     }
   },
   

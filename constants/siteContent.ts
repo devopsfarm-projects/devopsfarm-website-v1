@@ -14,7 +14,7 @@ export const siteContent = {
     addresses: [
       {
         type: "Headquarters",
-        line1: "DevOpsFarm, Bhaskar Cir",
+        line1: "DevOpsFarm, Bhaskar Circle",
         line2: "Near Sangwan Medical Store, Ratanada",
         line3: "Jodhpur, Rajasthan 342011"
       }
@@ -242,30 +242,6 @@ export const siteContent = {
         type: "Full-time",
         desc: "Architect Internal Developer Platforms (IDP) using Backstage and Kubernetes for Fortune 500 clients.",
         tags: ["Kubernetes", "Go", "Backstage"]
-      },
-      {
-        title: "Principal SRE",
-        dept: "Operations",
-        loc: "Remote (Global)",
-        type: "Full-time",
-        desc: "Lead incident response, define SLOs, and build self-healing infrastructure automation.",
-        tags: ["Terraform", "Prometheus", "Python"]
-      },
-      {
-        title: "Solutions Architect",
-        dept: "Pre-Sales",
-        loc: "Remote (US East)",
-        type: "Full-time",
-        desc: "Design cloud-native migration strategies and guide potential clients through technical discovery.",
-        tags: ["AWS", "Architecture", "Sales"]
-      },
-      {
-        title: "FinOps Analyst",
-        dept: "Consulting",
-        loc: "Remote (EU)",
-        type: "Full-time",
-        desc: "Analyze cloud spend and implement cost-saving strategies for large-scale AWS/Azure environments.",
-        tags: ["Cost Optimization", "SQL", "Excel"]
       }
     ]
   },

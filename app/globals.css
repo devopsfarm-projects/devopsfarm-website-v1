@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --olive: #4b5d24;
+  --cream: #f8f7f2;
+  --tan: #ede6d9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-olive: var(--olive);
+  --color-cream: var(--cream);
+  --color-tan: var(--tan);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cream);
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-olive {
+  background-color: var(--olive);
+}
+
+.text-olive {
+  color: var(--olive);
+}
+
+.border-olive {
+  border-color: var(--olive);
+}
+
+.bg-tan {
+  background-color: var(--tan);
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Entry Animations - Refined for Sophistication */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up-fade {
+  animation: slideUpFade 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fill-mode-forwards {
+  animation-fill-mode: forwards;
+}
+
+/* Funnel Shapes */
+.funnel-segment {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  transition: all 0.5s ease;
+}
+
+.funnel-segment:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Parallax/Hero Overlay */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(75, 93, 36, 0.4) 0%, rgba(248, 247, 242, 1) 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--olive);
+  border-radius: 4px;
+}
+
+/* Toast animations */
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Page loader fade-in */
+@keyframes pageContentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-content-fade-in {
+  animation: pageContentFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.3s ease-in;
+}

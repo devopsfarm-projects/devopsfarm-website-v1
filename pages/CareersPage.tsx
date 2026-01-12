@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Laptop, Users, Plus, ChevronDown, CheckCircle2, MapPin, Briefcase } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 import { siteContent } from '../constants/siteContent';
 
 export const CareersPage: React.FC = () => {

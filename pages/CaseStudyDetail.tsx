@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { caseStudies } from '../data/caseStudiesData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { ArrowLeft, CheckCircle2, Layers, Quote, TrendingUp, AlertTriangle, Lightbulb, Building2, Lock } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 export const CaseStudyDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

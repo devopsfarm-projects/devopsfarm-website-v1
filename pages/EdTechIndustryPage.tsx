@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, GraduationCap, Video, Users, Globe, 
   ShieldCheck, Server, Zap, BookOpen, BarChart3, 
   Wifi, Cpu, Lock, CheckCircle2
 } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
 
 export const EdTechIndustryPage: React.FC = () => {
   useEffect(() => {

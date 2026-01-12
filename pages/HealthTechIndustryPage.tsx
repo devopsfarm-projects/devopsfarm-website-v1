@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Shield, Activity, Database, Lock, Heart, FileCheck, Network, Server, Cloud, Stethoscope } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
 
 export const HealthTechIndustryPage: React.FC = () => {
   useEffect(() => {

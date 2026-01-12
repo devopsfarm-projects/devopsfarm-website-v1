@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { MapPin, Mail, Phone, Send, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { siteContent } from '../constants/siteContent';

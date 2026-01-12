@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { 
   ArrowLeft, CheckCircle, ArrowRight, Terminal, Zap, 
   BarChart3, Layers, FileCheck, Cpu, ChevronRight, BookOpen, 
@@ -9,7 +9,7 @@ import {
   Workflow, Boxes, Search, Activity, Zap as Lightning,
   GitBranch, MoveRight, Layers as LayersIcon
 } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 // Helper component for Hyperscaler Logos
 const AWSLogo = () => (

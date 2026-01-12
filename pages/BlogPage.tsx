@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { blogData } from '../data/blogData';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, Search, Zap } from 'lucide-react';
-import { CTA } from './CTA';
-import { Button } from './Button';
+import { CTA } from '../components/CTA';
+import { Button } from '../components/Button';
 
 export const BlogPage: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, Cpu, Activity, Zap, Layers, Server, 
@@ -7,7 +7,7 @@ import {
   Terminal as TerminalIcon, CheckCircle2, AlertTriangle, 
   Network, Lock, ChevronRight, BarChart3, LineChart
 } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 export const HpcIndustryPage: React.FC = () => {
   useEffect(() => {

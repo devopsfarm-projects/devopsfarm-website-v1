@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { servicesData } from '../data/servicesData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, PhoneCall, Layers, Code2, Users, ShieldCheck, Zap, ChevronDown, LineChart, Clock, XCircle, CheckCircle, HelpCircle } from 'lucide-react';
 import { CaseStudies } from './CaseStudies';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 export const ServicesPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

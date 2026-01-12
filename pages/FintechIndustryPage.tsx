@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, ShieldCheck, Lock, Globe, Database, 
   CreditCard, Activity, Server, FileCheck, 
   Key, Wallet, PieChart, Landmark, Bitcoin, TrendingUp
 } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
 
 export const FintechIndustryPage: React.FC = () => {
   useEffect(() => {

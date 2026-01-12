@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, Landmark, ShieldCheck, Globe, Database, 
   Layers, Lock, CheckCircle2, Zap, Server, Activity,
   Cpu, Building2, Terminal, FileCheck, Search
 } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
 
 export const BankingIndustryPage: React.FC = () => {
   useEffect(() => {

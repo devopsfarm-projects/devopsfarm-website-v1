@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { ArrowLeft, CheckCircle, ArrowRight, Calendar, MessageSquare, Laptop, Layers, ChevronDown, LayoutGrid, Timer, CheckCircle2, Activity, GitBranch, Settings, Code, Eye, Zap, Cloud, Server, Database, Shield, Lock, Key, DollarSign, TrendingDown, Monitor, AlertTriangle, Network, Globe } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 
 // Helper component for Hyperscaler Logos

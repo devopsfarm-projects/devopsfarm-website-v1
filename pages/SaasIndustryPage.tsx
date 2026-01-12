@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Cloud, Shield, Zap, TrendingUp, Users, Server, Lock, Globe, Rocket } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
 
 export const SaasIndustryPage: React.FC = () => {
   useEffect(() => {

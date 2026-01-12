@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { caseStudies, CaseStudy } from '../data/caseStudiesData';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Filter, Zap, ArrowRight, BarChart3, Clock, CheckCircle2 } from 'lucide-react';
-import { CTA } from './CTA';
-import { Testimonials } from './Testimonials';
-import { Button } from './Button';
+import { CTA } from '../components/CTA';
+import { Testimonials } from '../components/Testimonials';
+import { Button } from '../components/Button';
 
 export const CaseStudiesPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All Stories');

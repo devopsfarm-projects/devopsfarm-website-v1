@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 
 export const Services: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

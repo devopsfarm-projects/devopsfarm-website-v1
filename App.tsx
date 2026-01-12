@@ -4,55 +4,41 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TrustSection } from './components/TrustSection';
 import { TechStack } from './components/TechStack';
-import { Services } from './components/Services';
+import { Services } from './pages/Services';
 import { Stats } from './components/Stats';
 import { WhyUs } from './components/WhyUs';
 import { Process } from './components/Process';
-import { Industries } from './components/Industries';
+import { Industries } from './pages/Industries';
 import { Testimonials } from './components/Testimonials';
-import { CaseStudies } from './components/CaseStudies';
+import { CaseStudies } from './pages/CaseStudies';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
-import { ServiceDetail } from './components/ServiceDetail';
-import { SubServiceDetail } from './components/SubServiceDetail';
-import { Contact } from './components/Contact';
-import { ServicesPage } from './components/ServicesPage';
-import { CaseStudiesPage } from './components/CaseStudiesPage';
-import { CaseStudyDetail } from './components/CaseStudyDetail';
-import { AboutUs } from './components/AboutUs';
-import { BankingIndustryPage } from './components/BankingIndustryPage';
-import { NotFound } from './components/NotFound';
-import { CareersPage } from './components/CareersPage';
-import { SaasIndustryPage } from './components/SaasIndustryPage';
-import { HealthTechIndustryPage } from './components/HealthTechIndustryPage';
-import { HpcIndustryPage } from './components/HpcIndustryPage';
-import { BlogPage } from './components/BlogPage';
-import { BlogDetail } from './components/BlogDetail'; 
-import { FintechIndustryPage } from './components/FintechIndustryPage';
-import { EdTechIndustryPage } from './components/EdTechIndustryPage';
+import { ServiceDetail } from './pages/ServiceDetail';
+import { SubServiceDetail } from './pages/SubServiceDetail';
+import { Contact } from './pages/Contact';
+import { ServicesPage } from './pages/ServicesPage';
+import { CaseStudiesPage } from './pages/CaseStudiesPage';
+import { CaseStudyDetail } from './pages/CaseStudyDetail';
+import { AboutUs } from './pages/AboutUs';
+import { BankingIndustryPage } from './pages/BankingIndustryPage';
+import { NotFound } from './pages/NotFound';
+import { CareersPage } from './pages/CareersPage';
+import { SaasIndustryPage } from './pages/SaasIndustryPage';
+import { HealthTechIndustryPage } from './pages/HealthTechIndustryPage';
+import { HpcIndustryPage } from './pages/HpcIndustryPage';
+import { BlogPage } from './pages/BlogPage';
+import { BlogDetail } from './pages/BlogDetail'; 
+import { FintechIndustryPage } from './pages/FintechIndustryPage';
+import { EdTechIndustryPage } from './pages/EdTechIndustryPage';
 import { HomeValueProp } from './components/HomeValueProp';
 import ScrollToTop from './components/ScrollToTop';
 import { MobileStickyCTA } from './components/MobileStickyCTA';
-import { PrivacyPolicy } from './components/PrivacyPolicy';
-import { TermsConditions } from './components/TermsConditions';
-import { CookiePolicy } from './components/CookiePolicy';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsConditions } from './pages/TermsConditions';
+import { CookiePolicy } from './pages/CookiePolicy';
+import HomePage from './pages/homePage';
 
-const HomePage: React.FC = () => (
-  <>
-    <Hero />
-    <TrustSection />
-    <HomeValueProp />
-    <Services />
-    <TechStack />
-    <Stats />
-    <WhyUs />
-    <CaseStudies />
-    <Process />
-    <Industries />
-    <Testimonials />
-    <CTA />
-  </>
-);
+
 
 const App: React.FC = () => {
   return (

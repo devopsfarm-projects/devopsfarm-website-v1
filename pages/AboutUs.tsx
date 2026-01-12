@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Target, Shield, Zap, ArrowRight, CheckCircle2, Coffee } from 'lucide-react';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 export const AboutUs: React.FC = () => {
   useEffect(() => {

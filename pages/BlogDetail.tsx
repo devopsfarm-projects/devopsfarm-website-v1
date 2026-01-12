@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { blogData } from '../data/blogData';
-import { Button } from './Button';
+import { Button } from '../components/Button';
 import { ArrowLeft, Calendar, User, Facebook, Linkedin, Twitter, Share2 } from 'lucide-react';
-import { CTA } from './CTA';
+import { CTA } from '../components/CTA';
 
 export const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { JSX, useEffect } from 'react';
 import { Button } from '@/components/common/button.component';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Cloud, Shield, Zap, TrendingUp, Users, Server, Lock, Globe, Rocket } from 'lucide-react';
 import { CTA } from '@/components/common/CTA.component';
 import { Testimonials } from '@/components/testimonials.component';
 
-export const SaasIndustryPage: React.FC = () => {
+export default function SaasIndustryPage(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "SaaS Cloud Modernization - DevOpsFarm";

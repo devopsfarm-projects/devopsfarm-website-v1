@@ -7,12 +7,13 @@ import { TechStack } from "@/components/techStack.component"
 import { Testimonials } from "@/components/testimonials.component"
 import { TrustSection } from "@/components/trustSection.component"
 import { WhyUs } from "@/components/whyUs.component"
-import { Industries } from "./industries/page"
-import { CaseStudies } from "./case-studies/[id]/page"
+import Industries from "@/components/industries.component"
+import { CaseStudies } from "@/components/caseStudies.component"
+import { Services } from "@/components/services.components"
 
 
 export const metadata ={
-  title: "Title",
+  title: "DevopsFarm - Home",
   description: "Meta description",
 }
 
@@ -23,6 +24,7 @@ export default function Home() {
     <Hero />
     <TrustSection />
     <HomeValueProp />
+    <Services />
     <TechStack />
     <Stats />
     <WhyUs />

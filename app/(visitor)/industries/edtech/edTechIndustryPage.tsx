@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { JSX, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/common/button.component';
 import { 
@@ -11,7 +11,7 @@ import {
 import { CTA } from '@/components/common/CTA.component';
 import { Testimonials } from '@/components/testimonials.component';
 
-export const EdTechIndustryPage: React.FC = () => {
+export default function EdTechIndustryPage(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0); 
     document.title = "EdTech Cloud Solutions - DevOpsFarm";

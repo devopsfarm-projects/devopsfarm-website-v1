@@ -292,7 +292,7 @@ export const siteContent = {
       { name: "Production MLOps", href: "/services/aiops-mlops" }
     ],
     company: [
-      { name: "About Us", href: "/about" },
+      { name: "About Us", href: "/about-us" },
       { name: "Case Studies", href: "/case-studies" },
       { name: "Blog", href: "/blog" },
       { name: "Careers", href: "/careers", badge: "HIRING" },

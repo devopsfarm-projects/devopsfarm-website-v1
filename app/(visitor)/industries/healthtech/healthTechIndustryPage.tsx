@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { JSX, useEffect } from 'react';
 import { Button } from '@/components/common/button.component';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Shield, Activity, Database, Lock, Heart, FileCheck, Network, Server, Cloud, Stethoscope } from 'lucide-react';
 import { CTA } from '@/components/common/CTA.component';
 import { Testimonials } from '@/components/testimonials.component';
 
-export const HealthTechIndustryPage: React.FC = () => {
+export default function HealthTechIndustryPage(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Healthcare Cloud Solutions - DevOpsFarm";

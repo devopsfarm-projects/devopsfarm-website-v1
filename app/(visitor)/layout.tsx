@@ -1,9 +1,11 @@
-"use client";
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-
-import { UserProvider } from "@/contexts/UserContext";
+import  Navbar  from "@/components/common/navbar.component";
+import { Footer } from "@/components/common/footer.component";
+import { Providers } from "@/components/providers.component";
+import ScrollToTop from "@/components/scrollToTop.component";
+import { MobileStickyCTA } from "@/components/MobileStickyCTA";
+// import { UserProvider } from "@/contexts/UserContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +26,21 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Providers>
+            <ScrollToTop />
 
-        <div className="min-h-screen flex flex-col selection:bg-olive/20 selection:text-olive">
+            <div className="min-h-screen flex flex-col selection:bg-olive/20 selection:text-olive">
+             <Navbar />
 
-          <main className={`grow `}>
-            {children}
-          </main>
-        </div>
+              <main className="grow">
+               {children}
+              </main>
 
+              <Footer />
+              <MobileStickyCTA />
+          </div>
+        </Providers>
       </body>
     </html>
   );

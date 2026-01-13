@@ -1,6 +1,5 @@
 'use client';
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { servicesData } from '@/constants/mockData/servicesData';
@@ -68,8 +67,8 @@ const getCapabilityIcon = (moduleId: string) => {
 };
 
 export const ServiceDetail: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const service = servicesData.find(s => s.id === id);
+  const { serviceId } = useParams<{ serviceId: string }>();
+  const service = servicesData.find(s => s.id === serviceId);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -200,7 +199,7 @@ export const ServiceDetail: React.FC = () => {
 
 
       {/* --- DEDICATED HYPERSCALER EXCELLENCE SECTION --- */}
-      {id === 'cloud-engineering' && (
+      {serviceId === 'cloud-engineering' && (
         <section className="py-24 bg-white relative overflow-hidden">
            <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-16">
@@ -219,7 +218,7 @@ export const ServiceDetail: React.FC = () => {
                           Master the paradox of choice. From Control Tower governance to EKS performance and Graviton cost-tuning.
                       </p>
                       <Link 
-                          href={`/services/${id}/managed-aws-services`} 
+                          href={`/services/${serviceId}/managed-aws-services`} 
                           className="text-orange-600 font-bold text-sm flex items-center gap-2 group/link border-b-2 border-transparent hover:border-orange-500 w-fit pb-1 transition-all"
                       >
                           Explore AWS Module <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -236,7 +235,7 @@ export const ServiceDetail: React.FC = () => {
                           Engineered for data and AI leaders. Master GKE, BigQuery slot-optimization, and Vertex AI MLOps.
                       </p>
                       <Link 
-                          href={`/services/${id}/managed-gcp-services`} 
+                          href={`/services/${serviceId}/managed-gcp-services`} 
                           className="text-blue-600 font-bold text-sm flex items-center gap-2 group/link border-b-2 border-transparent hover:border-blue-600 w-fit pb-1 transition-all"
                       >
                           Explore GCP Module <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -253,7 +252,7 @@ export const ServiceDetail: React.FC = () => {
                           Enterprise-grade hybrid cloud. Integration with Entra ID, AKS, Azure DevOps, and Microsoft Sentinel.
                       </p>
                       <Link 
-                          href={`/services/${id}/managed-azure-services`} 
+                          href={`/services/${serviceId}/managed-azure-services`} 
                           className="text-indigo-600 font-bold text-sm flex items-center gap-2 group/link border-b-2 border-transparent hover:border-indigo-600 w-fit pb-1 transition-all"
                       >
                           Explore Azure Module <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -286,7 +285,7 @@ export const ServiceDetail: React.FC = () => {
                             {module.description}
                         </p>
                         <Link
-                            href={`/services/${id}/${module.id}`}
+                            href={`/services/${serviceId}/${module.id}`}
                             className="text-brand font-bold text-sm flex items-center gap-2 group/link border-b-2 border-transparent hover:border-brand w-fit pb-1 transition-all"
                         >
                             Explore Module <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

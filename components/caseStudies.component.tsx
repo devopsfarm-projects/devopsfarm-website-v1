@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { ArrowRight, ArrowLeft, TrendingUp, Building2, Plus } from 'lucide-react';
 import Link from 'next/link';
 import { caseStudies } from '@/constants/mockData/caseStudiesData';

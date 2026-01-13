@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { JSX, useEffect } from 'react';
 import { Button } from '@/components/common/button.component';
 import Link from 'next/link';
 import { 
@@ -11,7 +11,7 @@ import {
 import { CTA } from '@/components/common/CTA.component';
 import { Testimonials } from '@/components/testimonials.component';
 
-export const FintechIndustryPage: React.FC = () => {
+export default function FintechIndustryPage(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "FinTech Cloud Solutions - DevOpsFarm";

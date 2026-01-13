@@ -85,7 +85,7 @@ export class ApiClient {
 
   // About page data
   async getAboutData(userId?: string) {
-    return this.request('/content/about', {
+    return this.request('/content/about-us', {
       params: userId ? { userId } : {},
     });
   }

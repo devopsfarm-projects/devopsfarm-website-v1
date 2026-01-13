@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { Rocket, Activity, Wallet, Headphones } from 'lucide-react';
 
 const stats = [

@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from './common/button.component';
 import Link from 'next/link';

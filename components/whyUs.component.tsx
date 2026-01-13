@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { Zap, Lock, Code2, LineChart, CheckCircle2 } from 'lucide-react';
 import { Button } from './common/button.component';
 import Link from 'next/link';

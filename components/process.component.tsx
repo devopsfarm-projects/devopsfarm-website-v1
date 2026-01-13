@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { Search, PenTool, Workflow, TrendingUp } from 'lucide-react';
 
 const steps = [

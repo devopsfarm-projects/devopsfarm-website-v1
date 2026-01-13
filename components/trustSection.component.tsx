@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 const LOGOS = [
   "Acme Corp", "GlobalTech", "Nebula", "Vortex Systems", "Krypton", "Apex"
 ];

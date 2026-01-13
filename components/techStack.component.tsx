@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 const techs = [
   "Kubernetes", "AWS", "Terraform", "Docker", "Prometheus", 
   "Grafana", "GitLab", "Azure", "Google Cloud", "Ansible",

@@ -47,24 +47,22 @@ export const Hero: React.FC = () => {
           
           {/* LEFT COLUMN: Copy & Points */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-bold uppercase tracking-wider mb-8 shadow-lg shadow-navy-900/20 hover:scale-105 transition-transform cursor-default">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-bold uppercase tracking-wider mb-8 shadow-lg shadow-navy-900/20 hover:scale-105 transition-transform cursor-default bg-black">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-light opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-darkviolet-light opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand "></span>
               </span>
               Architecting the Future Cloud Infrastructure
             </div>
-            
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-navy-900 mb-8 leading-[1.05]">
               Cloud Infrastructure <br className="hidden lg:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">Reimagined.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent text-brand 
+                ">Reimagined.</span>
             </h1>
-            
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl">
               Automated, self-healing cloud infrastructure engineered for high-growth companies and enterprises.
               Faster releases. Higher reliability. Predictable cloud costs.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link href="/contact">
                 <Button size="lg" className="shadow-xl shadow-brand/25 group px-8 py-4 text-lg">
@@ -72,8 +70,9 @@ export const Hero: React.FC = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/case-studies">
-                  <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg">
+            <Link href="/case-studies">
+                  <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25
+                  ">
                     View Case Studies
                   </Button>
               </Link>
@@ -98,7 +97,7 @@ export const Hero: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand/5 rounded-full blur-3xl animate-pulse-slow"></div>
 
             {/* Main Interactive Card */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] bg-navy-900 rounded-2xl shadow-2xl border border-navy-800 p-6 transform rotate-y-[-12deg] rotate-x-[5deg] hover:rotate-0 transition-transform duration-700">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] bg-navy-900 rounded-2xl shadow-2xl border border-navy-800 p-6 transform rotate-y-[-12deg] rotate-x-[5deg] hover:rotate-0 transition-transform duration-700 bg-black">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
                     <div className="flex gap-2">
@@ -144,9 +143,8 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
             </div>
-
             {/* Floating Elements */}
-            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 animate-float">
+            <div className="absolute top-20 right-10 bg-white p-4 rounded-xl shadow-xl border border-gray-100 animate-float" >
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                         <Check className="w-6 h-6 text-green-600" />

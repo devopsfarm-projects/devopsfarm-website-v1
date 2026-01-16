@@ -13,7 +13,7 @@ export const HomeValueProp: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold text-brand-light uppercase tracking-widest mb-3">The Infrastructure Gap</h2>
+            <h2 className="text-sm font-bold text-brand-light uppercase tracking-widest mb-3 text-brand">The Infrastructure Gap</h2>
             <h3 className="text-3xl md:text-5xl font-bold mb-6">Stop Fighting Your Own Platform</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
                 Most engineering teams spend 40% of their time fighting fires and wrestling with configuration. We flip the equation.
@@ -51,13 +51,13 @@ export const HomeValueProp: React.FC = () => {
             </div>
 
             {/* The New Way */}
-            <div className="bg-brand/10 border border-brand/30 rounded-2xl p-8 lg:p-10 backdrop-blur-sm relative overflow-hidden shadow-2xl shadow-brand/10 group transform md:scale-105">
+            <div className="bg-brand/10 border border-brand/30 rounded-2xl p-8 lg:p-10 backdrop-blur-sm relative overflow-hidden shadow-2xl shadow-brand/10 group transform md:scale-105 ">
                  <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <CheckCircle2 className="w-32 h-32 text-brand" />
                 </div>
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-accent"></div>
                 <h4 className="text-xl font-bold text-brand-light mb-6 flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6" />
+                    <CheckCircle2 className="w-6 h-6 background-color:violet" />
                     DevOpsFarm Platform
                 </h4>
                 <ul className="space-y-4">
@@ -82,7 +82,7 @@ export const HomeValueProp: React.FC = () => {
                     <Link href="/contact">
                         <Button fullWidth className="bg-white text-navy-900 hover:bg-gray-100 font-bold border-none">
                             Schedule Technical Audit
-                            <ArrowRight className="ml-2 w-4 h-4" />
+                            <ArrowRight className="ml-2 w-4 h-4"/>
                         </Button>
                     </Link>
                 </div>

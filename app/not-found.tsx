@@ -1,5 +1,4 @@
 'use client';
-
 import './globals.css';
 import Link from 'next/link';
 import { Home, ArrowLeft, Search } from 'lucide-react';

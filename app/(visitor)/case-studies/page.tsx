@@ -29,14 +29,14 @@ export default function CaseStudiesPage(): JSX.Element {
     <div className="pt-24 min-h-screen bg-white text-navy-900">
       
       {/* 1. HERO & FEATURED STUDY */}
-      <section className="bg-navy-900 text-white pt-20 pb-32 relative overflow-hidden">
+      <section className="bg-navy-900 text-white pt-20 pb-32 relative overflow-hidden bg-black">
         {/* Background */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-brand/20 via-navy-900 to-navy-900 pointer-events-none"></div>
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-brand/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 bg-bra bg-black">
             <div className="mb-16 max-w-2xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-light text-xs font-bold uppercase tracking-wider mb-6 border border-white/10">
                     Real Results

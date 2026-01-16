@@ -6,8 +6,8 @@ const LOGOS = [
 
 export const TrustSection: React.FC = () => {
   return (
-    <section className="py-12 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 border-b border-gray-100 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 ">
         <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">
           Trusted by Engineering Teams Worldwide
         </p>

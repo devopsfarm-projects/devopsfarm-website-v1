@@ -78,7 +78,7 @@ export default function Navbar(): JSX.Element {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group cursor-pointer z-50" onClick={() => window.scrollTo(0,0)}>
               <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-sm">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-sm ">
                     <defs>
                         <linearGradient id="logo_gradient" x1="0" y1="24" x2="48" y2="24" gradientUnits="userSpaceOnUse">
                         <stop offset="0" stopColor="#3B82F6" />
@@ -104,14 +104,14 @@ export default function Navbar(): JSX.Element {
               
               {/* Services Dropdown Trigger */}
               <div 
-                className="relative group"
+                className="relative group "
                 onMouseEnter={() => setActiveDropdown('services')}
               >
                 <button 
-                  className={`text-[14px] font-medium flex items-center gap-1 transition-colors py-4 ${activeDropdown === 'services' ? 'text-brand' : 'text-gray-600 hover:text-navy-900'}`}
+                  className={`text-[14px] font-medium flex items-center gap-1 transition-colors py-4   ${activeDropdown === 'services' ? 'text-brand' : 'text-gray-600 hover:text-navy-900'}`}
                 >
                   Services
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 bg-brand:hover ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
                 </button>
               </div>
 
@@ -121,17 +121,15 @@ export default function Navbar(): JSX.Element {
                 onMouseEnter={() => setActiveDropdown('industries')}
               >
                 <button 
-                  className={`text-[14px] font-medium flex items-center gap-1 transition-colors py-4 ${activeDropdown === 'industries' ? 'text-brand' : 'text-gray-600 hover:text-navy-900'}`}
+                  className={`text-[14px] font-medium flex items-center gap-1 transition-colors py-4 .bg-brand:hover ${activeDropdown === 'industries' ? 'text-brand' : 'text-gray-600 hover:text-navy-900'}`}
                 >
                   Industries
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'industries' ? 'rotate-180' : ''}`} />
                 </button>
               </div>
-
               <Link href="/case-studies" className="text-[14px] font-medium text-gray-600 hover:text-navy-900 transition-colors py-4" onMouseEnter={() => setActiveDropdown(null)}>
                 Case Studies
               </Link>
-              
               <Link href="/about-us" className="text-[14px] font-medium text-gray-600 hover:text-navy-900 transition-colors py-4" onMouseEnter={() => setActiveDropdown(null)}>
                 About
               </Link>
@@ -140,7 +138,7 @@ export default function Navbar(): JSX.Element {
             {/* Desktop CTA */}
             <div className="hidden md:block z-50">
               <Link href="/contact">
-                <Button size="sm" className="font-bold px-6 bg-navy-900 hover:bg-brand text-white border-0">
+                <Button size="sm" className="font-bold px-6 bg-navy-900 hover:bg-brand-dark text-black border-0">
                   Book Consultation
                 </Button>
               </Link>
@@ -204,7 +202,6 @@ export default function Navbar(): JSX.Element {
                     </div>
                  </div>
                )}
-
                {/* Industries Content */}
                {activeDropdown === 'industries' && (
                   <div className="flex flex-col lg:flex-row gap-2">
@@ -243,7 +240,6 @@ export default function Navbar(): JSX.Element {
                     </div>
                   </div>
                )}
-
              </div>
           </div>
         </div>
@@ -323,7 +319,6 @@ export default function Navbar(): JSX.Element {
              </Link>
              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-lg font-bold text-navy-900">Contact</Link>
           </div>
-          
           {/* Prominent CTA */}
           <div className="p-6 border-t border-gray-50 bg-gray-50/50">
             <Button 

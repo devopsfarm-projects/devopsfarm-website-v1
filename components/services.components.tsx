@@ -24,15 +24,14 @@ export const Services: React.FC = () => {
             We deliver enterprise-grade solutions across the entire cloud lifecycle.
           </p>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 items-start mb-12">
           {servicesData.map((service, index) => {
             const isOpen = openIndex === index;
-            
+  
             return (
               <div 
                 key={service.id}
-                className={`group p-4 md:p-8 bg-white border rounded-2xl transition-all duration-300 h-full flex flex-col ${
+                className={`group p-4 md:p-8 bg-white border rounded-2xl transition-all duration-300 h-full flex flex-col  ${
                   isOpen 
                     ? 'border-brand shadow-xl ring-1 ring-brand/10' 
                     : 'border-gray-100 hover:border-brand/30 hover:shadow-lg'
@@ -40,7 +39,7 @@ export const Services: React.FC = () => {
               >
                 <Link href={`/services/${service.id}`} className="block">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
-                    <service.icon className="w-5 h-5 md:w-6 md:h-6 text-brand group-hover:text-white" />
+                    <service.icon className="w-5 h-5 md:w-6 md:h-6 text-brand group-hover:text-white bg-red" />
                     </div>
                 </Link>
                 

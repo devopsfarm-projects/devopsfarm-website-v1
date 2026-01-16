@@ -54,7 +54,6 @@ const industries = [
     color: "bg-purple-50 text-purple-600"
   }
 ];
-
 export default function Industries(): JSX.Element{
   return (
     <section id="industries" className="py-24 bg-white border-t border-gray-100">
@@ -70,16 +69,15 @@ export default function Industries(): JSX.Element{
                 </button>
             </Link>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((ind) => (
             <Link 
               key={ind.id}
               href={ind.link}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/20 transition-all duration-300 flex flex-col"
+              className="group bg-white  rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/20 transition-all duration-300 flex flex-col"
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${ind.color} group-hover:scale-110 transition-transform`}>
-                <ind.icon className="w-6 h-6" />
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${ind.color} group-hover:scale-110 transition-transform bg-brand`}>
+                <ind.icon className="w-6 h-6 bg-brand-hover"  />
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-2 group-hover:text-brand transition-colors">{ind.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">

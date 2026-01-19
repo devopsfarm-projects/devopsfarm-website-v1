@@ -31,7 +31,7 @@ export default function SaasIndustryPage(): JSX.Element {
                     </div>
                     <h1 className="text-4xl lg:text-6xl font-extrabold text-navy-900 mb-6 leading-[1.15]">
                         Drive SaaS Growth with <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">Seamless Cloud Modernization</span>
+                        <span className="text-brand bg-clip-text bg-gradient-to-r from-brand to-accent ">Seamless Cloud Modernization</span>
                     </h1>
                     <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                         Build secure, high-performing SaaS platforms with modern cloud operations that reduce tenant costs, accelerate feature release, and ensure SOC2/HIPAA compliance from day one.
@@ -44,7 +44,7 @@ export default function SaasIndustryPage(): JSX.Element {
                             </Button>
                         </Link>
                         <Link href="/case-studies">
-                            <Button variant="outline" size="lg">
+                            <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
                                 View SaaS Case Studies
                             </Button>
                         </Link>

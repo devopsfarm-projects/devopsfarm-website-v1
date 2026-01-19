@@ -39,7 +39,7 @@ export default function FintechIndustryPage(): JSX.Element {
                     </div>
                     <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 leading-[1.1]">
                         The Infrastructure of <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Modern Money.</span>
+                        <span className="text-brand bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Modern Money.</span>
                     </h1>
                     <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
                         We engineer the zero-trust, ultra-low latency platforms that power the next generation of payments, digital banking, and algorithmic trading.

@@ -155,7 +155,7 @@ export const ServiceDetail: React.FC = () => {
                  <div className="relative aspect-square max-w-sm mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-tr from-brand/20 to-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
                     <div className="relative h-full w-full bg-white/40 backdrop-blur-md border border-white/50 rounded-3xl shadow-2xl p-8 flex flex-col justify-center items-center text-center">
-                         <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 text-brand:hover">
+                         <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 ">
                             <service.icon className="w-10 h-10 text-brand  " />
                          </div>
                          <h3 className="text-2xl font-bold text-navy-900 mb-2">Enterprise Grade</h3>

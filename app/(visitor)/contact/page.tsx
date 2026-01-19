@@ -64,7 +64,7 @@ export default function Contact(): JSX.Element {
                     <Mail className="w-5 h-5 text-brand" />
                     <a href="mailto:query@devopsfarm.in" className="hover:text-brand transition-colors">query@devopsfarm.in</a>
                 </div>
-                <Button variant="outline" className="w-full gap-2 group">
+                <Button variant="outline" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
                     <MapPin className="w-4 h-4 text-brand group-hover:text-white transition-colors" />
                     Get Directions
                 </Button>

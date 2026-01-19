@@ -36,7 +36,7 @@ export default function EdTechIndustryPage(): JSX.Element {
                     </div>
                     <h1 className="text-4xl lg:text-6xl font-extrabold mb-6 leading-[1.1]">
                         Infrastructure for the <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Future of Learning.</span>
+                        <span className="text-brand bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Future of Learning.</span>
                     </h1>
                     <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
                         We build the elastic, low-latency cloud platforms that power global classrooms, massive MOOCs, and real-time collaboration tools.
@@ -312,7 +312,7 @@ export default function EdTechIndustryPage(): JSX.Element {
 
       {/* 5. CTA INTERSTITIAL */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-12 mb-20 relative z-20">
-         <div className="bg-gradient-to-r from-orange-600 to-amber-600 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+         <div className="bg-gradient-to-r from-orange-600 to-amber-60 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
              
              <div className="relative z-10 flex items-start gap-6">

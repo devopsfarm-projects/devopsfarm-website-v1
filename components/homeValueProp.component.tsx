@@ -57,7 +57,7 @@ export const HomeValueProp: React.FC = () => {
                 </div>
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-accent"></div>
                 <h4 className="text-xl font-bold text-brand-light mb-6 flex items-center gap-3">
-                    <CheckCircle2 className="w-6 h-6 background-color:violet" />
+                    <CheckCircle2 className="w-6 h-6 color:violet" />
                     DevOpsFarm Platform
                 </h4>
                 <ul className="space-y-4">

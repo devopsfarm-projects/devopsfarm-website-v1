@@ -118,7 +118,7 @@ export const ServiceDetail: React.FC = () => {
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-navy-900 mb-6 leading-tight">
                 {service.title} <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">Solutions for Scale.</span>
+                <span className="text-brand bg-clip-text bg-gradient-to-r from-brand to-accent">Solutions for Scale.</span>
               </h1>
               <div className="text-xl text-gray-600 mb-10 leading-relaxed whitespace-pre-line">
                 {service.fullContent?.longDescription}
@@ -155,8 +155,8 @@ export const ServiceDetail: React.FC = () => {
                  <div className="relative aspect-square max-w-sm mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-tr from-brand/20 to-accent/20 rounded-full blur-3xl animate-pulse-slow"></div>
                     <div className="relative h-full w-full bg-white/40 backdrop-blur-md border border-white/50 rounded-3xl shadow-2xl p-8 flex flex-col justify-center items-center text-center">
-                         <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6">
-                            <service.icon className="w-10 h-10 text-brand" />
+                         <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-6 text-brand:hover">
+                            <service.icon className="w-10 h-10 text-brand  " />
                          </div>
                          <h3 className="text-2xl font-bold text-navy-900 mb-2">Enterprise Grade</h3>
                          <p className="text-gray-600 mb-6">Designed for scale, security, and velocity.</p>
@@ -177,11 +177,11 @@ export const ServiceDetail: React.FC = () => {
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
              <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
              
-             <div className="relative z-10 flex items-center gap-5">
-                 <div className="bg-white/20 rounded-xl p-3 backdrop-blur-md border border-white/20">
+             <div className="relative z-10 flex items-center gap-5 ">
+                 <div className="bg- rounded-xl p-3 backdrop-blur-md border border-white/20">
                      <Timer className="w-8 h-8 text-white" />
                  </div>
-                 <div>
+                 <div className="">
                      <h3 className="text-2xl font-bold text-white mb-1">Need a Quick Review?</h3>
                      <p className="text-blue-100 text-sm">Our principal engineers can audit your {service.title} setup in 1 day.</p>
                  </div>

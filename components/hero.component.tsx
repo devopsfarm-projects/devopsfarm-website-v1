@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
             </div>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-navy-900 mb-8 leading-[1.05]">
               Cloud Infrastructure <br className="hidden lg:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent text-brand 
+              <span className="text-brand bg-clip-text bg-gradient-to-r from-brand to-accent 
                 ">Reimagined.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl">
@@ -71,7 +71,7 @@ export const Hero: React.FC = () => {
                 </Button>
               </Link>
             <Link href="/case-studies">
-                  <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25
+                  <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white 
                   ">
                     View Case Studies
                   </Button>

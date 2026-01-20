@@ -1,0 +1,1809 @@
+/* ============================================
+   GLOBALS CSS - DevOpsFarm Website
+   Converted from React to Next.js
+   ============================================ */
+
+/* ============================================
+   1. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ============================================ */
+
+:root {
+  /* Color Palette */
+  --color-navy-900: #0F172A;
+  --color-navy-800: #1E293B;
+  --color-navy-700: #334155;
+  --color-navy-950: #0F172A;
+
+  --color-brand: #7C3AED;
+  --color-brand-dark: #6D28D9;
+  --color-brand-light: #A78BFA;
+  --color-brand-bg: #F5F3FF;
+
+  --color-accent: #3B82F6;
+  --color-accent-dark: #2563EB;
+  --color-accent-light: #60A5FA;
+
+  /* Grayscale */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-900: #111827;
+
+  /* Status Colors */
+  --color-red-50: #FEF2F2;
+  --color-red-100: #FEE2E2;
+  --color-red-400: #F87171;
+  --color-red-500: #EF4444;
+  --color-red-600: #DC2626;
+
+  --color-green-50: #F0FDF4;
+  --color-green-500: #22C55E;
+  --color-green-600: #16A34A;
+
+  --color-blue-50: #EFF6FF;
+  --color-blue-400: #60A5FA;
+  --color-blue-600: #2563EB;
+
+  --color-slate-50: #F8FAFC;
+  --color-slate-900: #0F172A;
+
+  --color-indigo-50: #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+
+  --color-cyan-50: #ECFDFD;
+  --color-cyan-600: #0891B2;
+
+  --color-purple-50: #FAF5FF;
+  --color-purple-600: #9333EA;
+
+  --color-orange-50: #FFF7ED;
+  --color-orange-500: #F97316;
+
+  /* Semantic Colors */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Typography */
+  --font-family-sans: '"Plus Jakarta Sans", sans-serif';
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Sizing */
+  --spacing-unit: 4px;
+  --max-content-width: 80rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-brand: 0 10px 30px 0 rgba(124, 58, 237, 0.2);
+  --shadow-brand-lg: 0 20px 40px 0 rgba(124, 58, 237, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+}
+
+/* ============================================
+   2. RESET & BASE STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-white);
+  color: var(--color-navy-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-brand);
+  color: var(--color-white);
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+   4. PROSE STYLING
+   ============================================ */
+
+.prose {
+  line-height: 1.75;
+}
+
+.prose-lg {
+  font-size: 1.125rem;
+}
+
+.prose-slate {
+  color: var(--color-gray-600);
+}
+
+.prose a {
+  color: var(--color-brand);
+  font-weight: var(--font-weight-bold);
+  transition: text-decoration var(--transition-base);
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.prose h3 {
+  color: var(--color-navy-900);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-extrabold);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+  color: var(--color-gray-600);
+}
+
+.prose ul {
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   5. LAYOUT UTILITIES
+   ============================================ */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--max-content-width);
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* ============================================
+   6. ANIMATIONS & KEYFRAMES
+   ============================================ */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ============================================
+   7. BACKGROUND PATTERNS
+   ============================================ */
+
+.bg-grid-pattern {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* ============================================
+   8. CUSTOM UNDERLINE EFFECT
+   ============================================ */
+
+.underline-scribble {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-scribble::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg width='200' height='12' viewBox='0 0 200 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8.5C45.5 2.5 125 -4.5 198 8.5' stroke='%237C3AED' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+/* ============================================
+   9. BUTTON STYLES
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.025em;
+  transition: all var(--transition-base);
+  outline: none;
+  border-radius: var(--radius-md);
+  transform: translateZ(0);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-brand);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: var(--color-brand);
+  color: var(--color-white);
+  box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.2);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-dark);
+  box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-navy-900);
+  border: 2px solid var(--color-navy-900);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-navy-900);
+  color: var(--color-white);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ============================================
+   10. CARD STYLES
+   ============================================ */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-dark {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+}
+
+.card-dark:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   11. BADGE STYLES
+   ============================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-brand {
+  background-color: rgba(124, 58, 237, 0.1);
+  color: var(--color-brand);
+  border: 1px solid var(--color-brand);
+}
+
+.badge-dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-brand-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   12. SECTION STYLES
+   ============================================ */
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-sm {
+  padding: 3rem 0;
+}
+
+.section-lg {
+  padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-lg {
+    padding: 4rem 0;
+  }
+}
+
+.section-divider {
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+/* ============================================
+   13. GRADIENT UTILITIES
+   ============================================ */
+
+.gradient-brand {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.2) 0%,
+    rgba(59, 130, 246, 0.2) 100%
+  );
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+/* ============================================
+   14. OVERLAY & BACKDROP
+   ============================================ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   15. SCROLL & SCROLLBAR
+   ============================================ */
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   16. FORM ELEMENTS
+   ============================================ */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='phone'],
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='phone']:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+/* ============================================
+   17. RESPONSIVE UTILITIES
+   ============================================ */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hidden-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+/* ============================================
+   18. UTILITY CLASSES
+   ============================================ */
+
+/* Display */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Flexbox */
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* Spacing */
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+/* Borders & Radius */
+.rounded {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+
+.rounded-3xl {
+  border-radius: var(--radius-3xl);
+}
+
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+.border {
+  border: 1px solid var(--color-gray-300);
+}
+
+.border-t {
+  border-top: 1px solid var(--color-gray-300);
+}
+
+.border-b {
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.border-y {
+  border-top: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.border-l {
+  border-left: 1px solid var(--color-gray-300);
+}
+
+.border-l-4 {
+  border-left: 4px solid;
+}
+
+.border-brand {
+  border-color: var(--color-brand);
+}
+
+.border-gray-100 {
+  border-color: var(--color-gray-100);
+}
+
+.border-gray-200 {
+  border-color: var(--color-gray-200);
+}
+
+.border-gray-700 {
+  border-color: var(--color-gray-700);
+}
+
+.border-white {
+  border-color: var(--color-white);
+}
+
+.border-white-10 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Shadows */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-2xl {
+  box-shadow: var(--shadow-2xl);
+}
+
+.shadow-brand {
+  box-shadow: var(--shadow-brand);
+}
+
+/* Transitions */
+.transition {
+  transition: all var(--transition-base);
+}
+
+.transition-colors {
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.transition-transform {
+  transition: transform var(--transition-base);
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Colors - Text */
+.text-white {
+  color: var(--color-white);
+}
+
+.text-navy-900 {
+  color: var(--color-navy-900);
+}
+
+.text-navy-950 {
+  color: var(--color-navy-950);
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.text-brand-light {
+  color: var(--color-brand-light);
+}
+
+.text-gray-400 {
+  color: var(--color-gray-400);
+}
+
+.text-gray-500 {
+  color: var(--color-gray-500);
+}
+
+.text-gray-600 {
+  color: var(--color-gray-600);
+}
+
+.text-red-500 {
+  color: var(--color-red-500);
+}
+
+.text-red-600 {
+  color: var(--color-red-600);
+}
+
+.text-green-500 {
+  color: var(--color-green-500);
+}
+
+.text-blue-400 {
+  color: var(--color-blue-400);
+}
+
+.text-blue-600 {
+  color: var(--color-blue-600);
+}
+
+.text-cyan-600 {
+  color: var(--color-cyan-600);
+}
+
+.text-orange-500 {
+  color: var(--color-orange-500);
+}
+
+/* Colors - Background */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-navy-900 {
+  background-color: var(--color-navy-900);
+}
+
+.bg-navy-950 {
+  background-color: var(--color-navy-950);
+}
+
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+.bg-brand-bg {
+  background-color: var(--color-brand-bg);
+}
+
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+.bg-slate-50 {
+  background-color: var(--color-slate-50);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+}
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100);
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200);
+}
+
+.bg-red-50 {
+  background-color: var(--color-red-50);
+}
+
+.bg-red-100 {
+  background-color: var(--color-red-100);
+}
+
+.bg-green-50 {
+  background-color: var(--color-green-50);
+}
+
+.bg-blue-50 {
+  background-color: var(--color-blue-50);
+}
+
+.bg-indigo-50 {
+  background-color: var(--color-indigo-50);
+}
+
+.bg-indigo-100 {
+  background-color: var(--color-indigo-100);
+}
+
+.bg-cyan-50 {
+  background-color: var(--color-cyan-50);
+}
+
+.bg-orange-50 {
+  background-color: var(--color-orange-50);
+}
+
+.bg-purple-50 {
+  background-color: var(--color-purple-50);
+}
+
+/* Opacity */
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-5 {
+  opacity: 0.05;
+}
+
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+/* Position & Sizing */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-mandatory {
+  scroll-snap-type: mandatory;
+}
+
+/* Filters & Effects */
+.grayscale {
+  filter: grayscale(1);
+}
+
+.grayscale-0 {
+  filter: grayscale(0);
+}
+
+.blur-sm {
+  filter: blur(4px);
+}
+
+.blur-md {
+  filter: blur(12px);
+}
+
+.blur-lg {
+  filter: blur(24px);
+}
+
+.blur-3xl {
+  filter: blur(64px);
+}
+
+/* ============================================
+   19. MEDIA QUERIES
+   ============================================ */
+
+@media (max-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+
+  .sm\:p-4 {
+    padding: 1rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:col-span-4 {
+    grid-column: span 4;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5;
+  }
+
+  .lg\:col-span-7 {
+    grid-column: span 7;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8;
+  }
+
+  .lg\:col-span-12 {
+    grid-column: span 12;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .lg\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:text-center {
+    text-align: center;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+  }
+
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .lg\:ml-12 {
+    margin-left: 3rem;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ============================================
+   20. HOVER & INTERACTIVE STATES
+   ============================================ */
+
+.hover\:bg-navy-900:hover {
+  background-color: var(--color-navy-900);
+}
+
+.hover\:bg-brand:hover {
+  background-color: var(--color-brand);
+}
+
+.hover\:bg-brand-dark:hover {
+  background-color: var(--color-brand-dark);
+}
+
+.hover\:text-white:hover {
+  color: var(--color-white);
+}
+
+.hover\:text-brand:hover {
+  color: var(--color-brand);
+}
+
+.hover\:text-brand-dark:hover {
+  color: var(--color-brand-dark);
+}
+
+.hover\:shadow-md:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
+.hover\:grayscale-0:hover {
+  filter: grayscale(0);
+}
+
+.hover\:translate-x-1:hover {
+  transform: translateX(0.25rem);
+}
+
+.hover\:-translate-x-1:hover {
+  transform: translateX(-0.25rem);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   21. FOCUS STATES
+   ============================================ */
+
+.focus\:outline-none:focus {
+  outline: none;
+}
+
+.focus\:ring-2:focus {
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-brand);
+}
+
+.focus\:ring-offset-2:focus {
+  outline-offset: 2px;
+}
+
+/* ============================================
+   22. PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-navy-900);
+  }
+
+  button,
+  .btn {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
+
+/* ============================================
+   END OF GLOBALS CSS
+   ============================================ */

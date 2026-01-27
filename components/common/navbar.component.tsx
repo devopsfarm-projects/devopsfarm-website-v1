@@ -174,7 +174,7 @@ export default function Navbar(): JSX.Element {
                               onClick={() => setActiveDropdown(null)}
                               className="flex items-start gap-4 group rounded-xl p-3 hover:bg-gray-50 transition-colors"
                            >
-                              <div className="w-10 h-10 rounded-lg bg-white border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all text-brand">
+                               <div className="w-10 h-10 rounded-lg bg-white border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all text-brand">
                                   <link.icon className="w-5 h-5" />
                               </div>
                               <div>

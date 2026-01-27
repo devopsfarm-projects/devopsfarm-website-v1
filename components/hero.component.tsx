@@ -65,14 +65,13 @@ export const Hero: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link href="/contact">
-                <Button size="lg" className="shadow-xl shadow-brand/25 group px-8 py-4 text-lg">
+                <Button size="lg" className="shadow-xl shadow-brand/25 group px-8 py-4 text-lg bg-violet">
                   Start Transformation
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             <Link href="/case-studies">
-                  <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white 
-                  ">
+                  <Button variant="outline" size="lg" className="border-navy-900  hover:bg-navy-900  px-8 py-4 text-lg bg-white/25">
                     View Case Studies
                   </Button>
               </Link>
@@ -82,7 +81,7 @@ export const Hero: React.FC = () => {
             <div className="grid grid-cols-2 gap-y-4 gap-x-2">
               {heroPoints.slice(0, 6).map((point, idx) => (
                 <div key={idx} className="flex items-center gap-3 group">
-                  <div className="w-5 h-5 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand transition-colors">
+                  <div className="w-5 h-5 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors">
                     <Check className="w-3 h-3 text-brand group-hover:text-white transition-colors" strokeWidth={3} />
                   </div>
                   <span className="text-gray-600 font-medium text-sm group-hover:text-navy-900 transition-colors">{point}</span>

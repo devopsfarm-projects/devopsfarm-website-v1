@@ -94,10 +94,13 @@ body {
 .text-brand {
   color: var(--brand-violet);
 }
-
-.text-brand:hover {
-  color: white
+.bg-violet{
+    background-color: #7C3AED ;
 }
+/* .group-hover:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+} */
 
 .bg-white {
   --tw-bg-opacity: 1;
@@ -249,6 +252,11 @@ text-lg {
 .text-navy-900 {
     --tw-text-opacity: 1;
     color: rgb(15 23 42 );
+}
+
+.text-white:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 );
 }
 .border-gray-200 {
     --tw-border-opacity: 1;

@@ -59,7 +59,8 @@ export const WhyUs: React.FC = () => {
                 </div>
 
                 <Link href="/about-us">
-                    <Button variant="outline" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
+                    <Button variant="outline" size="lg" className="border-navy-900  hover:bg-navy-900 hover:text-white px-8 py-4 text-lg bg-white/25
+                  ">
                         More About Us
                     </Button>
                 </Link>

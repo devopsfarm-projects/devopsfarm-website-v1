@@ -39,7 +39,8 @@ export const Services: React.FC = () => {
               >
                 <Link href={`/services/${service.id}`} className="block">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">
-                    <service.icon className="w-5 h-5 md:w-6 md:h-6 text-brand group-hover:text-white bg-red" />
+                   <service.icon className="w-5 h-5 md:w-6 md:h-6 stroke-brand group-hover:stroke-white transition-colors" />
+
                     </div>
                 </Link>
                 
@@ -71,7 +72,7 @@ export const Services: React.FC = () => {
                     </ul>
                     <div className="mt-3 md:mt-4 pt-3 md:pt-4">
                         <Link href={`/services/${service.id}`}>
-                            <Button variant="outline" size="sm" fullWidth className="group border-gray-200 hover:border-brand hover:bg-brand hover:text-white text-xs md:text-sm py-2 px-2">
+                            <Button variant="outline" size="sm" fullWidth className="group border-navy-900 hover:border-brand hover:bg-black hover:text-white text-xs md:text-sm py-2 px-2">
                                 Full Details
                                 <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1 md:ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
@@ -96,7 +97,7 @@ export const Services: React.FC = () => {
         
         <div className="text-center">
             <Link href="/services">
-                <Button size="lg" className="shadow-lg shadow-brand/20 group">
+                <Button size="lg" className="shadow-lg shadow-brand/20 group bg-violet">
                     View All Solutions
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

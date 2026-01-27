@@ -76,7 +76,7 @@ export default function Industries(): JSX.Element{
               href={ind.link}
               className="group bg-white  rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/20 transition-all duration-300 flex flex-col"
             >
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${ind.color} group-hover:scale-110 transition-transform bg-brand`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${ind.color} group-hover:scale-110 transition-transform `}>
                 <ind.icon className="w-6 h-6 bg-brand-hover"  />
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-2 group-hover:text-brand transition-colors">{ind.title}</h3>

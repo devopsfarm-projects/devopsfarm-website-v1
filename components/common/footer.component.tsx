@@ -39,9 +39,9 @@ export const Footer: React.FC = () => {
               {general.tagline}
             </p>
             <div className="flex gap-4">
-              <a href={general.socials.twitter} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand transition-all duration-300 hover:-translate-y-1"><Twitter className="w-5 h-5" /></a>
-              <a href={general.socials.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand transition-all duration-300 hover:-translate-y-1"><Linkedin className="w-5 h-5" /></a>
-              <a href={general.socials.github} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand transition-all duration-300 hover:-translate-y-1"><Github className="w-5 h-5" /></a>
+              <a href={general.socials.twitter} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors transition-all duration-300 hover:-translate-y-1"><Twitter className="w-5 h-5" /></a>
+              <a href={general.socials.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10       rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors transition-all duration-300 hover:-translate-y-1"><Linkedin className="w-5 h-5" /></a>
+              <a href={general.socials.github} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors transition-all duration-300 hover:-translate-y-1"><Github className="w-5 h-5" /></a>
             </div>
           </div>
 

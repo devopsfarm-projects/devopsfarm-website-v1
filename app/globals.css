@@ -70,7 +70,7 @@ body {
 .to-purple-600 {
     --tw-gradient-to: #9333ea;
 }
-.bg-brand:hover { background-color: var(--brand-violet); }
+
 
 .reveal-section {
   opacity: 0;
@@ -101,7 +101,9 @@ body {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 } */
-
+.text-white{
+  color: white;
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: white;
@@ -219,8 +221,8 @@ via-indigo-600 {
   --tw-gradient-to: rgba(107, 9, 146, 0.788)
 }
 
-.from-brand {
-     --tw-gradient-from: #7C3AED ;
+.from-brand-light {
+     --tw-gradient-from: #A78BFA ;
   /* --tw-gradient-to:var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
 }
@@ -495,6 +497,13 @@ text-lg {
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+}
+.text-accent {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 );
+}
+.bg-red{
+    background-color: red ;
 }
 
 @keyframes slide {

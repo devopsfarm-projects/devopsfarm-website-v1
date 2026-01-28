@@ -129,7 +129,7 @@ export const ServiceDetail: React.FC = () => {
                 <Link href="/contact">
                     <Button 
                         size="lg" 
-                        className="gap-2 bg-brand hover:bg-brand-dark text-white shadow-xl shadow-brand/20 ring-2 ring-transparent transition-all hover:scale-105"
+                        className="gap-2 bg-violet hover:bg-brand-dark text-white shadow-xl shadow-brand/20 ring-2 ring-transparent transition-all hover:scale-105"
                     >
                     Book a Discovery Call
                     <Calendar className="w-4 h-4" />
@@ -140,7 +140,7 @@ export const ServiceDetail: React.FC = () => {
                 <Link href="/contact">
                     <Button 
                         size="lg" 
-                        className="gap-2 bg-white text-navy-900 border border-gray-200 hover:border-brand/50 hover:text-brand hover:shadow-lg transition-all"
+                        className="gap-2 bg-violet text-white border border-gray-200 hover:border-brand/50  hover:shadow-lg transition-all"
                     >
                     Request Demo
                     <Laptop className="w-4 h-4" />
@@ -188,7 +188,7 @@ export const ServiceDetail: React.FC = () => {
              </div>
              <div className="relative z-10">
                  <Link href="/contact">
-                     <Button className="bg-white text-indigo-600 hover:bg-blue-50 border-none font-bold shadow-lg">
+                     <Button className="bg-white text-navy-900 hover:bg-blue-50 border-none font-bold shadow-lg">
                          Book 1-Day Audit
                      </Button>
                  </Link>
@@ -277,7 +277,7 @@ export const ServiceDetail: React.FC = () => {
                     return (
                     <div key={i} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/20 transition-all group flex flex-col h-full">
                         {/* Dynamic Icon based on capability type */}
-                        <div className="w-8 h-8 rounded-full border-2 border-navy-900 flex items-center justify-center mb-6 group-hover:bg-navy-900 group-hover:text-white transition-all duration-300">
+                        <div className="w-8 h-8 rounded-full border-2 border-navy-900 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-all duration-300">
                             <IconComponent className="w-5 h-5 stroke-[1.5]" />
                         </div>
                         <h3 className="text-xl font-bold text-navy-900 mb-3 tracking-tight leading-tight">{module.title}</h3>
@@ -332,14 +332,14 @@ export const ServiceDetail: React.FC = () => {
                                          <div className="text-white font-bold">Create Microservice</div>
                                          <div className="text-xs text-gray-500">Spring Boot • Go • Node.js</div>
                                      </div>
-                                     <Button size="sm" className="py-1 px-3 text-xs">Launch</Button>
+                                     <Button size="sm" className="py-1 px-3 text-xs bg-violet">Launch</Button>
                                  </div>
                                  <div className="flex justify-between items-center bg-navy-900 p-4 rounded-lg border border-navy-700 opacity-60">
                                      <div>
                                          <div className="text-white font-bold">Provision Database</div>
                                          <div className="text-xs text-gray-500">Postgres • Redis • Mongo</div>
                                      </div>
-                                     <Button size="sm" variant="secondary" className="py-1 px-3 text-xs bg-navy-800 border-navy-600 text-gray-400">Locked</Button>
+                                     <Button size="sm" variant="secondary" className="py-1 px-3 text-xs bg-white border-navy-600 text-brand-light">Locked</Button>
                                  </div>
                                   <div className="flex justify-between items-center bg-navy-900 p-4 rounded-lg border border-navy-700">
                                      <div>
@@ -452,7 +452,7 @@ export const ServiceDetail: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {service.details?.map((detail, idx) => (
                             <div key={idx} className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors">
-                                <div className="w-2 h-2 rounded-full bg-brand"></div>
+                                <div className="w-2 h-2 rounded-full bg-violet"></div>
                                 <span className="font-medium text-white">{detail}</span>
                             </div>
                         ))}
@@ -460,14 +460,14 @@ export const ServiceDetail: React.FC = () => {
                 </div>
                 
                 {/* Steady Component - No Hover Movements */}
-                <div className="bg-gradient-to-br from-brand to-brand-dark p-1 rounded-2xl shadow-2xl">
+                <div className="bg-gradient-to-br from-violet to-violet-dark p-1 rounded-2xl shadow-2xl">
                     <div className="bg-navy-800 p-8 rounded-xl h-full flex flex-col justify-center items-center text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to get started?</h3>
                         <p className="text-gray-300 mb-8">
                             Stop wrestling with infrastructure and start shipping features. Schedule a technical deep dive with our principal engineers.
                         </p>
                         <Link href="/contact" className="w-full">
-                            <Button fullWidth variant="primary" className="justify-between group shadow-lg shadow-brand/20">
+                            <Button fullWidth variant="primary" className="justify-between group shadow-lg shadow-brand/20 bg-violet">
                                 Book Consultation
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-white" />
                             </Button>

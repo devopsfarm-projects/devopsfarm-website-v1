@@ -38,13 +38,13 @@ export default function SaasIndustryPage(): JSX.Element {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link href="/contact">
-                            <Button size="lg" className="shadow-xl shadow-brand/20 group">
+                            <Button size="lg" className="shadow-xl shadow-brand/20 group bg-violet">
                                 Speak to a SaaS Architect
                                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="/case-studies">
-                            <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
+                            <Button variant="outline" size="lg" className="border-navy-900  hover:bg-navy-900 hover:text-white px-8 py-4 text-lg bg-white/25 ">
                                 View SaaS Case Studies
                             </Button>
                         </Link>
@@ -120,10 +120,10 @@ export default function SaasIndustryPage(): JSX.Element {
       {/* Small Vibrant CTA */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 mt-10">
          <div className="bg-gradient-to-r from-accent via-blue-600 to-brand rounded-2xl p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-             <div className="absolute inset-0 bg-white/5 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/20 to-transparent"></div>
+             <div className="absolute inset-0 bg-violet/5 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]  to-transparent"></div>
              <div className="relative z-10 flex items-center gap-5">
-                 <div className="bg-white/20 rounded-xl p-3 backdrop-blur-md">
-                     <Rocket className="w-8 h-8 text-white" />
+                 <div className="bg-violet/20 rounded-xl p-3 backdrop-blur-md">
+                     <Rocket className="w-8 h-8 text-white bg-violet" />
                  </div>
                  <div>
                      <h3 className="text-2xl font-bold text-white mb-1">Scaling for your Series B?</h3>
@@ -132,7 +132,7 @@ export default function SaasIndustryPage(): JSX.Element {
              </div>
              <div className="relative z-10">
                  <Link href="/contact">
-                     <Button className="bg-white text-accent hover:bg-blue-50 border-none font-bold">
+                     <Button className="bg-violet text-white hover:bg-white-50 border-none font-bold">
                          Get Growth Roadmap
                      </Button>
                  </Link>
@@ -152,7 +152,7 @@ export default function SaasIndustryPage(): JSX.Element {
                         SaaS companies face constant pressure to improve security, meet strict compliance standards (SOC2, HIPAA), and deliver new features quickly. Outdated single-tenant architectures create barriers to scaling and erode margins.
                     </p>
                     <Link href="/contact">
-                        <Button className="gap-2">
+                        <Button className="gap-2 bg-violet">
                             Assess Your Infrastructure
                             <ArrowRight className="w-4 h-4" />
                         </Button>
@@ -195,7 +195,7 @@ export default function SaasIndustryPage(): JSX.Element {
 
               <div className="grid md:grid-cols-3 gap-8">
                   {/* Card 1 */}
-                  <div className="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-brand/50 transition-colors">
+                  <div className="bg-navy-800 p-8 rounded-2xl border border-navy-700 hover:border-violet transition-colors">
                       <div className="w-12 h-12 bg-brand/10 rounded-xl flex items-center justify-center mb-6">
                           <Server className="w-6 h-6 text-brand-light" />
                       </div>

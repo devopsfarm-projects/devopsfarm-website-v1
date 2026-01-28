@@ -72,7 +72,7 @@ export default function CaseStudiesPage(): JSX.Element {
                             </div>
 
                             <Link href={`/case-studies/${featuredStudy.id}`}>
-                                <Button className="bg-white text-navy-900 hover:bg-gray-100 border-none font-bold px-8">
+                                <Button className="bg-violet text-navy-900 hover:bg-gray-100 border-none font-bold px-8">
                                     Read Full Story <ArrowRight className="ml-2 w-4 h-4" />
                                 </Button>
                             </Link>
@@ -227,7 +227,7 @@ export default function CaseStudiesPage(): JSX.Element {
                                   <span className="text-brand">4x Faster</span>
                               </div>
                               <div className="w-full bg-gray-200 rounded-full h-2">
-                                  <div className="bg-brand h-2 rounded-full w-[80%]"></div>
+                                  <div className="bg-violet h-2 rounded-full w-[80%]"></div>
                               </div>
                           </div>
                           <div>
@@ -247,7 +247,7 @@ export default function CaseStudiesPage(): JSX.Element {
 
       {/* 5. CTA INTERSTITIAL */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-20">
-          <div className="bg-gradient-to-br from-navy-800 to-black rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="bg-black rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
               <div className="relative z-10">
                   <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-xs font-bold mb-4 border border-white/10">
@@ -261,7 +261,7 @@ export default function CaseStudiesPage(): JSX.Element {
               </div>
               <div className="relative z-10 flex-shrink-0">
                   <Link href="/contact">
-                      <Button size="lg" className="bg-brand hover:bg-brand-dark border-none font-bold shadow-lg shadow-brand/20">
+                      <Button size="lg" className="bg-violet hover:bg-brand-dark border-none font-bold shadow-lg shadow-brand/20">
                           Check Availability
                           <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>

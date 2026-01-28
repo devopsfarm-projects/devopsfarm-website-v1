@@ -27,7 +27,7 @@ export default function AboutUs(): JSX.Element {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
                 Builders. Engineers. <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-white">Cloud Natives.</span>
+                <span className="text-violet bg-clip-text bg-gradient-to-r from-violet-light to-white">Cloud Natives.</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
                 We are a collective of principal engineers and architects dedicated to solving the hardest infrastructure challenges for the world's most ambitious companies.
@@ -85,9 +85,9 @@ export default function AboutUs(): JSX.Element {
 
       {/* Small Vibrant CTA - Interstitial */}
       <section className="px-6 lg:px-8 max-w-7xl mx-auto mb-10">
-         <div className="bg-gradient-to-r from-navy-800 to-navy-900 rounded-2xl p-8 border border-navy-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+         <div className="bg-black rounded-2xl p-8 border border-navy-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-                 <div className="bg-brand rounded-full p-3 shadow-lg shadow-brand/30">
+                 <div className="bg-violet rounded-full p-3 shadow-lg shadow-brand/30">
                      <Coffee className="w-6 h-6 text-white" />
                  </div>
                  <div>
@@ -96,7 +96,7 @@ export default function AboutUs(): JSX.Element {
                  </div>
             </div>
             <Link href="/contact">
-                <Button size="sm" className="bg-white text-navy-900 hover:bg-gray-100 border-none font-bold">
+                <Button size="sm" className="bg-violet text-white hover:bg-gray-100 border-none font-bold">
                     Book a Meet & Greet
                 </Button>
             </Link>

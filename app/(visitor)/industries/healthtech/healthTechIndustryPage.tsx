@@ -38,13 +38,13 @@ export default function HealthTechIndustryPage(): JSX.Element {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link href="/contact">
-                            <Button size="lg" className="shadow-xl shadow-brand/20 group">
+                            <Button size="lg" className="shadow-xl shadow-brand/20 group bg-violet">
                                 Consult a Health Architect
                                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
                         <Link href="/case-studies">
-                            <Button variant="outline" size="lg" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
+                            <Button variant="outline" size="lg" className="border-navy-900  hover:bg-navy-900 hover:text-white px-8 py-4 text-lg bg-white/25">
                                 View Healthcare Case Studies
                             </Button>
                         </Link>
@@ -123,7 +123,7 @@ export default function HealthTechIndustryPage(): JSX.Element {
                       ].map((item, idx) => (
                           <div key={idx} className="flex gap-5 group">
                               <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all duration-300">
-                                  <item.icon className="w-6 h-6 text-brand group-hover:text-white" />
+                                  <item.icon className="w-6 h-6 text-brand group-hover:stroke-white" />
                               </div>
                               <div>
                                   <h3 className="text-xl font-bold text-navy-900 mb-2">{item.title}</h3>

@@ -312,7 +312,7 @@ export default function Navbar(): JSX.Element {
             <Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-lg font-bold text-navy-900">About</Link>
             <Link href="/careers" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-600 hover:text-brand transition-colors block text-sm font-medium hover:translate-x-1 transform duration-200 flex items-center gap-2 group">
               Careers
-              <span className="px-2 py-0.5 text-[10px] font-bold bg-brand/10 text-brand rounded-full border border-brand/20 group-hover:bg-brand group-hover:text-white transition-colors">HIRING</span>
+              <span className="px-2 py-0.5 text-[10px] font-bold bg-brand/10 rounded-full border border-brand/20 group-hover:bg-brand group-hover:text-white transition-colors">HIRING</span>
             </Link>
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-lg font-bold text-navy-900">Contact</Link>
           </div>

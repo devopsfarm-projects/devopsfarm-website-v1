@@ -460,7 +460,7 @@ export const ServiceDetail: React.FC = () => {
                 </div>
                 
                 {/* Steady Component - No Hover Movements */}
-                <div className="bg-gradient-to-br from-violet to-violet-dark p-1 rounded-2xl shadow-2xl">
+                <div className="bg-gradient-to-br from-violet to-violet-dark p-1 rounded-2xl shadow-2xl ">
                     <div className="bg-navy-800 p-8 rounded-xl h-full flex flex-col justify-center items-center text-center">
                         <h3 className="text-2xl font-bold mb-4">Ready to get started?</h3>
                         <p className="text-gray-300 mb-8">

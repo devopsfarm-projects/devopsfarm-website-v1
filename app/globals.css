@@ -103,7 +103,7 @@ body {
 .bg-white {
   background-color: #ffffff !important;
 }
-
+ 
 .from-blue-600 {
   --tw-gradient-from: #3b82f6; /* Soft blue */
   --tw-gradient-to: rgba(59, 130, 246, 0);

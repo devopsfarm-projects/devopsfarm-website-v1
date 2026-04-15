@@ -311,29 +311,38 @@ export default function EdTechIndustryPage(): JSX.Element {
       </section>
 
       {/* 5. CTA INTERSTITIAL */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-12 mb-20 relative z-20">
-         <div className="bg-gradient-to-r from-orange-600 to-amber-60 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-             
-             <div className="relative z-10 flex items-start gap-6">
-                 <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-md shadow-inner border border-white/20">
-                     <Wifi className="w-10 h-10 text-white" />
-                 </div>
-                 <div>
-                     <h3 className="text-2xl font-bold text-white mb-2">Expanding to New Markets?</h3>
-                     <p className="text-orange-50 text-lg">Get our "Global EdTech" architecture blueprint.</p>
-                 </div>
-             </div>
-             <div className="relative z-10 w-full md:w-auto">
-                 <Link href="/contact">
-                     <Button size="lg" className="w-full md:w-auto bg-white text-orange-700 hover:bg-orange-50 border-none font-bold shadow-lg">
-                         Download Blueprint
-                         <ArrowRight className="ml-2 w-4 h-4" />
-                     </Button>
-                 </Link>
-             </div>
-         </div>
-      </section>
+   <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-12 mb-20 relative z-20">
+  <div className="bg-gradient-to-r from-orange-600 to-amber-600 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+    
+    {/* Dotted Pattern Overlay */}
+    <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:14px_14px] pointer-events-none"></div>
+
+    {/* Left Content */}
+    <div className="relative z-10 flex items-center gap-6">
+      <div className="bg-white/20 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-inner">
+        <Wifi className="w-9 h-9 text-white" />
+      </div>
+
+      <div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+          Expanding to New Markets?
+        </h3>
+        <p className="text-orange-50 text-base md:text-lg">
+          Get our "Global EdTech" architecture blueprint.
+        </p>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <Link
+      href="/contact"
+      className="relative z-10 inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 shadow-lg transition-all duration-300 hover:from-purple-700 hover:to-indigo-700"
+    >
+      Download Blueprint
+      <ArrowRight className="ml-2 w-4 h-4" />
+    </Link>
+  </div>
+</section>
 
       {/* 6. TECHNICAL FEATURES */}
       <section className="py-20 bg-white">

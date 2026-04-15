@@ -254,27 +254,37 @@ export default function BankingIndustryPage(): JSX.Element {
 
       {/* 5. SMALL INTERSTITIAL CTA */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-12 mb-20 relative z-20">
-         <div className="bg-gradient-to-r from-indigo-700 to-blue-800 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-             <div className="absolute inset-0 bg-white/5 opacity-20"></div>
-             <div className="relative z-10 flex items-start gap-6">
-                 <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-md shadow-inner border border-white/20">
-                     <Building2 className="w-10 h-10 text-white" />
-                 </div>
-                 <div>
-                     <h3 className="text-2xl font-bold text-white mb-2">Modernizing a Core System?</h3>
-                     <p className="text-indigo-50 text-lg">Download our "Banking Strangler Fig" architecture playbook.</p>
-                 </div>
-             </div>
-             <div className="relative z-10 w-full md:w-auto">
-                 <Link href="/contact">
-                     <Button size="lg" className="w-full md:w-auto bg-white text-indigo-900 hover:bg-indigo-50 border-none font-bold shadow-lg">
-                         Get Playbook
-                         <ArrowRight className="ml-2 w-4 h-4" />
-                     </Button>
-                 </Link>
-             </div>
-         </div>
-      </section>
+  <div className="bg-gradient-to-r from-indigo-700 to-blue-800 rounded-3xl px-10 py-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+
+    {/* Subtle dotted pattern */}
+    <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:14px_14px] pointer-events-none"></div>
+
+    {/* Left Content */}
+    <div className="relative z-10 flex items-center gap-6">
+      <div className="bg-white/20 backdrop-blur-md border border-white/20 rounded-2xl p-4">
+        <Building2 className="w-9 h-9 text-white" />
+      </div>
+
+      <div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+          Modernizing a Core System?
+        </h3>
+        <p className="text-indigo-100 text-base md:text-lg">
+          Download our "Banking Strangler Fig" architecture playbook.
+        </p>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <Link
+      href="/contact"
+      className="relative z-10 inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 shadow-lg transition-all duration-300 hover:from-purple-700 hover:to-indigo-700 whitespace-nowrap"
+    >
+      Get Playbook
+      <ArrowRight className="ml-2 w-4 h-4" />
+    </Link>
+  </div>
+</section>
 
       {/* 6. Testimonials Reuse */}
       <Testimonials />

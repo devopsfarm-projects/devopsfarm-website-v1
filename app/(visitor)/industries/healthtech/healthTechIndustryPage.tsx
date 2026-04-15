@@ -150,26 +150,35 @@ export default function HealthTechIndustryPage(): JSX.Element {
 
       {/* Small Vibrant CTA */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 mt-10">
-         <div className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-600 rounded-2xl p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-             <div className="absolute inset-0 bg-white/5 opacity-50"></div>
-             <div className="relative z-10 flex items-center gap-5">
-                 <div className="bg-white/20 rounded-xl p-3 backdrop-blur-md">
-                     <Stethoscope className="w-8 h-8 text-white" />
-                 </div>
-                 <div>
-                     <h3 className="text-2xl font-bold text-white mb-1">HIPAA Audit Coming Up?</h3>
-                     <p className="text-pink-100 text-sm">We can automate your compliance evidence collection in 2 weeks.</p>
-                 </div>
-             </div>
-             <div className="relative z-10">
-                 <Link href="/contact">
-                     <Button className="bg-white text-red-500 hover:bg-pink-50 border-none font-bold">
-                         Get Compliance Check
-                     </Button>
-                 </Link>
-             </div>
-         </div>
-      </section>
+  <div className="hipaa-gradient rounded-2xl p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+    
+    {/* Subtle Overlay */}
+    <div className="absolute inset-0 bg-white/5 opacity-50 pointer-events-none"></div>
+
+    {/* Left Content */}
+    <div className="relative z-10 flex items-center gap-5">
+      <div className="bg-white/20 rounded-xl p-3 backdrop-blur-md">
+        <Stethoscope className="w-8 h-8 text-white" />
+      </div>
+      <div>
+        <h3 className="text-2xl font-bold text-white mb-1">
+          HIPAA Audit Coming Up?
+        </h3>
+        <p className="text-pink-100 text-sm">
+          We can automate your compliance evidence collection in 2 weeks.
+        </p>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <Link
+      href="/contact"
+      className="hipaa-button  px-6 py-3 rounded-lg font-bold shadow-md inline-flex items-center justify-center "
+    >
+      Get Compliance Check
+    </Link>
+  </div>
+</section>
 
       {/* 3. Accelerating Transformation (Solutions Grid) */}
       <section className="py-20 bg-white">

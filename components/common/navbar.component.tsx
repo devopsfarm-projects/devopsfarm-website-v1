@@ -173,7 +173,7 @@ export default function Navbar(): JSX.Element {
                         onClick={() => setActiveDropdown(null)}
                         className="flex items-start gap-4 group rounded-xl p-3 hover:bg-gray-50 transition-colors"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-white border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all text-navy-600">
+                        <div className="w-10 h-10 rounded-lg bg-white border border-gray-100 shadow-sm flex items-center justify-center flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-all text-brand">
                           <link.icon className="w-5 h-5" />
                         </div>
                         <div>
@@ -194,7 +194,7 @@ export default function Navbar(): JSX.Element {
                       </p>
                     </div>
                     <Link href="/case-studies/">
-                      <Button variant="outline" size="sm" fullWidth className="bg-white">
+                      <Button variant="outline" size="sm" fullWidth className="bg-white text-navy-900 hover:bg-brand hover:text-white border-gray-300">
                         Read Case Study
                       </Button>
                     </Link>
@@ -222,7 +222,7 @@ export default function Navbar(): JSX.Element {
                       </Link>
                     ))}
                   </div>
-                  <div className="w-full lg:w-80 bg-brand text-white rounded-xl p-6 flex flex-col justify-between relative overflow-hidden">
+                  <div className="w-full lg:w-80 bg-violet-600 text-white rounded-xl p-6 flex flex-col justify-between relative overflow-hidden">
                     <div className="relative z-10">
                       <div className="text-xs font-bold text-brand-light uppercase tracking-wider mb-4">Industry Focus</div>
                       <h4 className="font-bold text-white text-lg mb-2">Specialized Compliance?</h4>
@@ -232,7 +232,7 @@ export default function Navbar(): JSX.Element {
                     </div>
                     <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-10 translate-y-10"></div>
                     <Link href="/contact" className="relative z-10">
-                      <Button size="sm" fullWidth className="bg-white text-brand hover:bg-gray-100 border-none">
+                      <Button size="sm" fullWidth className="bg-violet text-white hover:bg-white border-none">
                         Consult an Architect
                       </Button>
                     </Link>

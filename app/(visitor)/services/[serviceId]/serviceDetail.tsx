@@ -188,9 +188,11 @@ export const ServiceDetail: React.FC = () => {
              </div>
              <div className="relative z-10">
                  <Link href="/contact">
-                     <Button className="bg-white text-navy-900 hover:bg-blue-50 border-none font-bold shadow-lg">
-                         Book 1-Day Audit
-                     </Button>
+                    <Button 
+  className="!bg-white text-navy-900 hover:!bg-blue-50 border-none font-bold shadow-lg"
+>
+  Book 1-Day Audit
+</Button>
                  </Link>
              </div>
          </div>

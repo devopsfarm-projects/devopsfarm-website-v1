@@ -100,9 +100,9 @@ body {
 .text-white{
   color: white;
 }
-.bg-white {
+/* .bg-white {
   background-color: #ffffff !important;
-}
+} */
  
 .from-blue-600 {
   --tw-gradient-from: #3b82f6; /* Soft blue */
@@ -112,16 +112,83 @@ body {
 .via-indigo-600 {
   --tw-gradient-stops: var(--tw-gradient-from), #6366f1, #8b5cf6;
 }
-
-
-/* .from-orange-600{
-    --tw-gradient-from: #ea580c var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(234 88 12 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+.hipaa-gradient {
+  background-image: linear-gradient(
+    to right,
+    #ef4444,   /* red-500 */
+    #ec4899,   /* pink-500 */
+    #9333ea    /* purple-600 */
+  ) !important;
 }
-.to-amber-600 {
-    --tw-gradient-to: #d97706 var(--tw-gradient-to-position);
-} */
+.hipaa-button {
+  background-image: linear-gradient(
+    to right,
+    #7c3aed,
+    #6366f1
+  );
+  color: hsl(288, 25%, 92%);
+  transition: all 0.3s ease;
+}
+
+.hipaa-button:hover {
+  background-image: linear-gradient(
+    to right,
+    #6d28d9,
+    #4f46e5
+  );
+}
+
+/* Green Gradient Background */
+.bank-cta-gradient {
+  background: linear-gradient(135deg, #059669, #0f766e); /* emerald-600 → teal-700 */
+}
+
+/* Dotted Pattern Overlay */
+.bank-cta-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+  opacity: 0.4;
+}
+
+/* Purple Gradient CTA Button */
+.bank-cta-button {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+}
+
+.bank-cta-button:hover {
+  background: linear-gradient(135deg, #6d28d9, #7e22ce);
+  transform: translateY(-1px);
+}
+
+/* ✅ Orange CTA Gradient */
+.orange-cta-gradient {
+  background: linear-gradient(135deg, #ea580c, #d97706); /* orange-600 → amber-600 */
+}
+
+/* ✅ Dotted Pattern Overlay */
+.orange-cta-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+  opacity: 0.4;
+}
+
+/* ✅ Purple Gradient Button */
+.orange-cta-button {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.orange-cta-button:hover {
+  background: linear-gradient(135deg, #6d28d9, #7e22ce);
+  transform: translateY(-1px);
+}
 .bg-navy-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42);
@@ -137,10 +204,10 @@ body {
   font-weight: 700;
 }
 
-.text-lg {
+/* .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
+} */
 
 .border-navy-900 {
   --tw-border-opacity: 1;
@@ -248,14 +315,9 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); */
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(
-    90deg,
-    #3b82f6 0%,
-    #6366f1 50%,
-    #8b5cf6 100%
-  ) !important;
-}
+/* .bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+} */
 .bg-\[url\(\'https\:\/\/www\.transparenttextures\.com\/patterns\/carbon-fibre\.png\'\)\] {
   background-image: radial-gradient(
     rgba(255, 255, 255, 0.25) 1px,
@@ -291,16 +353,15 @@ text-lg {
 .hover\:bg-blue-50:hover {
   background-color: #eff6ff !important;
 }
-.shadow-lg {
+/* .shadow-lg {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-}
+} */
 
 .rounded-lg {
   border-radius: 0.75rem;
 }
-.text-white:hover {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 );
+.group:hover .group-hover\:text-white {
+  color: rgb(255 255 255);
 }
 .border-gray-200 {
     --tw-border-opacity: 1;
@@ -407,9 +468,9 @@ text-lg {
   position: absolute;
 }
 
-.rounded-xl {
+/* .rounded-xl {
   border-radius: 0.75rem;
-}
+} */
 
 .top-20 {
   top: 5rem;
@@ -527,9 +588,13 @@ text-lg {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
 }
 
+/* Yeh add karo apni CSS mein */
 .group:hover .group-hover\:bg-brand {
-  --tw-bg-opacity: 1;
-  background-color: rgb(124 58 237 / var(--tw-bg-opacity, 1));
+  background-color: rgb(124 58 237) !important; /* violet, black nahi */
+}
+
+.group:hover .group-hover\:text-white {
+  color: rgb(255 255 255);
 }
 
 .whitespace-nowrap {

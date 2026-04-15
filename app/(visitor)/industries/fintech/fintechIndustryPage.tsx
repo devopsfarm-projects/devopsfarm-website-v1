@@ -305,29 +305,39 @@ export default function FintechIndustryPage(): JSX.Element {
 
       {/* 5. CTA INTERSTITIAL */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 -mt-12 mb-20 relative z-20">
-         <div className="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-             
-             <div className="relative z-10 flex items-start gap-6">
-                 <div className="bg-white/20 rounded-2xl p-4 backdrop-blur-md shadow-inner border border-white/20">
-                     <Wallet className="w-10 h-10 text-white" />
-                 </div>
-                 <div>
-                     <h3 className="text-2xl font-bold text-white mb-2">Building a Challenger Bank?</h3>
-                     <p className="text-emerald-50 text-lg">Get our "Day 0" Security Blueprint for fast regulatory approval.</p>
-                 </div>
-             </div>
-             <div className="relative z-10 w-full md:w-auto">
-                 <Link href="/contact">
-                     <Button size="lg" className="w-full md:w-auto bg-white text-emerald-800 hover:bg-emerald-50 border-none font-bold shadow-lg">
-                         Get Blueprint
-                         <ArrowRight className="ml-2 w-4 h-4" />
-                     </Button>
-                 </Link>
-             </div>
-         </div>
-      </section>
+  <div className="bank-cta-gradient rounded-3xl px-10 py-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
 
+    {/* Dotted Pattern Overlay */}
+    <div className="absolute inset-0 bank-cta-pattern pointer-events-none"></div>
+
+    {/* Left Content */}
+    <div className="relative z-10 flex items-center gap-6">
+      {/* Icon Container */}
+      <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-inner">
+        <Wallet className="w-9 h-9 text-white" />
+      </div>
+
+      {/* Text */}
+      <div>
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+          Building a Challenger Bank?
+        </h3>
+        <p className="text-emerald-100 text-base md:text-lg">
+          Get our "Day 0" Security Blueprint for fast regulatory approval.
+        </p>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <Link
+      href="/contact"
+      className="relative z-10 inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold text-white bank-cta-button shadow-lg transition-all duration-300"
+    >
+      Get Blueprint
+      <ArrowRight className="ml-2 w-4 h-4" />
+    </Link>
+  </div>
+</section>
       {/* 6. TECHNICAL DEEP DIVE */}
       <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">

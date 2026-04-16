@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Calendar } from 'lucide-react';
 
 export const MobileStickyCTA: React.FC = () => {
@@ -20,7 +22,7 @@ export const MobileStickyCTA: React.FC = () => {
 
   return (
     <Link 
-      to="/contact"
+      href="/contact"
       className={`fixed bottom-5 left-5 z-40 md:hidden transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1) transform ${
         isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-16 opacity-0 scale-90 pointer-events-none'
       }`}

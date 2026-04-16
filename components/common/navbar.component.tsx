@@ -194,9 +194,14 @@ export default function Navbar(): JSX.Element {
                       </p>
                     </div>
                     <Link href="/case-studies/">
-                      <Button variant="outline" size="sm" fullWidth className="bg-white text-navy-900 hover:bg-brand hover:text-white border-gray-300">
-                        Read Case Study
-                      </Button>
+                     <Button
+  variant="outline"
+  size="sm"
+  fullWidth
+ className="bg-white text-navy-900 hover:!bg-black hover:!text-white border-gray-300"
+>
+  Read Case Study
+</Button>
                     </Link>
                   </div>
                 </div>

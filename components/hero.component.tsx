@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import { Check, ArrowRight, Play, Terminal } from 'lucide-react';
 import { Button } from './common/button.component';
@@ -47,13 +46,23 @@ export const Hero: React.FC = () => {
           
           {/* LEFT COLUMN: Copy & Points */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-bold uppercase tracking-wider mb-8 shadow-lg shadow-navy-900/20 hover:scale-105 transition-transform cursor-default bg-black">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-darkviolet-light opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand "></span>
-              </span>
-              Architecting the Future Cloud Infrastructure
-            </div>
+  {/* Badge / Pill */}
+  <div
+    className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full
+    bg-navy-900 text-white text-xs font-bold uppercase tracking-wider
+    mb-8 shadow-lg shadow-navy-900/30 hover:scale-105
+    transition-transform cursor-default"
+  >
+    {/* Animated Dot */}
+    <span className="relative flex h-3 w-3">
+      {/* Ping Effect */}
+      <span className="absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75 "></span>
+      {/* Solid Center Dot */}
+      <span className="relative inline-flex h-3 w-3 rounded-full bg-violet-600"></span>
+    </span>
+
+    Architecting the Future Cloud Infrastructure
+  </div>
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-navy-900 mb-8 leading-[1.05]">
               Cloud Infrastructure <br className="hidden lg:block"/>
               <span className="text-brand bg-clip-text bg-gradient-to-r from-brand to-accent 

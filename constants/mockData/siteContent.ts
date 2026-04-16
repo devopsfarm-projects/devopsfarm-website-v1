@@ -290,6 +290,7 @@ export const siteContent = {
       { name: "DevSecOps & Security", href: "/services/cloud-security" },
       { name: "Cloud FinOps", href: "/services/cloud-finops" },
       { name: "Production MLOps", href: "/services/aiops-mlops" }
+      
     ],
     company: [
       { name: "About Us", href: "/about-us" },

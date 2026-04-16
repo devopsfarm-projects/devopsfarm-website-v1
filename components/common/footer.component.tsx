@@ -108,6 +108,7 @@ export const Footer: React.FC = () => {
                         {general.addresses[0].line2},<br/>
                         {general.addresses[0].line3}
                     </span>
+                    <span className="text-sm font-medium text-gray-600 mt-2">code deploy</span>
                   </div>
                 </li>
               </ul>

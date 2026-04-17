@@ -5,9 +5,10 @@ import { siteContent } from '@/constants/mockData/siteContent';
 
 export const Footer: React.FC = () => {
   const { footer, general } = siteContent;
-
+console.log("footer loaded");
   return (
     <footer className="bg-white border-t border-gray-100 pt-24 pb-12">
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-12 lg:gap-20 mb-20">
           
@@ -108,6 +109,7 @@ export const Footer: React.FC = () => {
                         {general.addresses[0].line2},<br/>
                         {general.addresses[0].line3}
                     </span>
+                    
                     <span className="text-sm font-medium text-gray-600 mt-2">code deploy</span>
                   </div>
                 </li>

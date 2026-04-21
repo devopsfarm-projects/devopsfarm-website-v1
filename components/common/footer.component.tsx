@@ -2,7 +2,6 @@
 import { Twitter, Linkedin, Github, MapPin, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
-import { Map } from '@/components/Map';
 
 export const Footer: React.FC = () => {
   const { footer, general } = siteContent;
@@ -12,25 +11,25 @@ console.log("footer loaded");
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-12 lg:gap-20 mb-20">
-
+          
           {/* Brand Column - Wider spacing on large screens */}
           <div className="md:col-span-4 lg:col-span-4">
             <Link href="/" className="flex items-center gap-3 mb-8 group w-fit">
               <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-sm">
-                  <defs>
-                    <linearGradient id="footer_logo_gradient" x1="0" y1="24" x2="48" y2="24" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stopColor="#3B82F6" />
-                      <stop offset="0.5" stopColor="#8B5CF6" />
-                      <stop offset="1" stopColor="#EC4899" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M24 24C20 32 8 32 8 24C8 16 20 16 24 24ZM24 24C28 32 40 32 40 24C40 16 28 16 24 24Z"
-                    stroke="url(#footer_logo_gradient)"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-sm">
+                    <defs>
+                        <linearGradient id="footer_logo_gradient" x1="0" y1="24" x2="48" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stopColor="#3B82F6" />
+                        <stop offset="0.5" stopColor="#8B5CF6" />
+                        <stop offset="1" stopColor="#EC4899" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M24 24C20 32 8 32 8 24C8 16 20 16 24 24ZM24 24C28 32 40 32 40 24C40 16 28 16 24 24Z" 
+                        stroke="url(#footer_logo_gradient)" 
+                        strokeWidth="5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                    />
                 </svg>
               </div>
               <span className="text-2xl font-bold text-navy-900 tracking-tight">
@@ -49,17 +48,17 @@ console.log("footer loaded");
 
           {/* Links Columns */}
           <div className="md:col-span-8 lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-10 lg:gap-12 pt-2">
-
+            
             {/* Services Column */}
             <div>
               <h4 className="font-bold text-navy-900 mb-8 text-sm uppercase tracking-widest">Services</h4>
               <ul className="space-y-4">
                 {footer.services.map((item) => (
-                  <li key={item.name}>
-                    <Link href={item.href} className="text-gray-600 hover:text-brand transition-colors block text-sm font-medium hover:translate-x-1 transform duration-200">
-                      {item.name}
-                    </Link>
-                  </li>
+                    <li key={item.name}>
+                        <Link href={item.href} className="text-gray-600 hover:text-brand transition-colors block text-sm font-medium hover:translate-x-1 transform duration-200">
+                            {item.name}
+                        </Link>
+                    </li>
                 ))}
               </ul>
             </div>
@@ -103,27 +102,23 @@ console.log("footer loaded");
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
-                   <div className="flex flex-col w-full"> {/* w-full add karo */}
+                  <div className="flex flex-col">
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Office</span>
                     <span className="text-sm font-medium text-gray-600 leading-relaxed">
-                      {general.addresses[0].line1},<br />
-                      {general.addresses[0].line2},<br />
-                      {general.addresses[0].line3}
+                        {general.addresses[0].line1},<br/>
+                        {general.addresses[0].line2},<br/>
+                        {general.addresses[0].line3}
                     </span>
- renuM
-<div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px' }}>
-  <Map />
-</div>
-</div>      
                     
                 
                   </div>
- main
                 </li>
               </ul>
             </div>
           </div>
+
         </div>
+        
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
           <p className="font-medium">&copy; {new Date().getFullYear()} {general.brandName}. All rights reserved.</p>
           <div className="flex gap-8">

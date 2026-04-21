@@ -2,6 +2,7 @@
 import { Twitter, Linkedin, Github, MapPin, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
+import { Map } from '@/components/Map';
 
 export const Footer: React.FC = () => {
   const { footer, general } = siteContent;
@@ -102,34 +103,21 @@ export const Footer: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand mt-0.5 flex-shrink-0" />
                    <div className="flex flex-col w-full"> {/* w-full add karo */}
-
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Office</span>
                     <span className="text-sm font-medium text-gray-600 leading-relaxed">
                       {general.addresses[0].line1},<br />
                       {general.addresses[0].line2},<br />
                       {general.addresses[0].line3}
                     </span>
-                    
-                      
-
-<div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px', minHeight: '250px' }}>
-  <iframe
-    src="https://www.openstreetmap.org/export/embed.html?bbox=73.0185,26.2650,73.0450,26.2850&layer=mapnik&marker=26.2748,73.0311"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    title="DevOpsFarm Location"
-    loading="lazy"
-  />
+<div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px' }}>
+  <Map />
 </div>
 </div>      
                 </li>
               </ul>
             </div>
           </div>
-
         </div>
-
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
           <p className="font-medium">&copy; {new Date().getFullYear()} {general.brandName}. All rights reserved.</p>
           <div className="flex gap-8">

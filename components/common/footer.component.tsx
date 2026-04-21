@@ -2,6 +2,7 @@
 import { Twitter, Linkedin, Github, MapPin, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
+import { Map } from '@/components/Map';
 
 export const Footer: React.FC = () => {
   const { footer, general } = siteContent;
@@ -109,7 +110,9 @@ console.log("footer loaded");
                         {general.addresses[0].line2},<br/>
                         {general.addresses[0].line3}
                     </span>
-                    
+                    <div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px' }}>
+  <Map />
+</div>
                 
                   </div>
                 </li>

@@ -340,7 +340,15 @@ a {
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
-
+.animate-slide:hover,
+.group:hover .animate-slide {
+  animation-play-state: paused;
+}
+.tech-badge:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  color: var(--color-brand);
+  box-shadow: var(--shadow-md);
+}
 /* ============================================
    7. BACKGROUND PATTERNS
    ============================================ */

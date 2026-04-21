@@ -1,11 +1,9 @@
 'use client';
-
 import { useEffect,JSX } from 'react';
 import { Button } from '@/components/common/button.component';
 import { MapPin, Mail, Phone, Send, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
-
 export default function Contact(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -64,13 +62,15 @@ export default function Contact(): JSX.Element {
                     <Mail className="w-5 h-5 text-brand" />
                     <a href="mailto:query@devopsfarm.in" className="hover:text-brand transition-colors">query@devopsfarm.in</a>
                 </div>
-                <Button variant="outline" className="border-gray-200 text-navy-900 hover:bg-gray-50 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:text-white ">
-                    <MapPin className="w-4 h-4 text-brand group-hover:text-white transition-colors" />
-                    Get Directions
-                </Button>
+               <Button
+  variant="outline"
+  className="group border-gray-200 !text-navy-900 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:!text-white"
+>
+  <MapPin className="w-4 h-4 text-navy-900 group-hover:!text-white transition-colors" />
+  Get Directions
+</Button>
              </div>
           </div>
-
           {/* Right Column: The Form */}
           <div className="lg:col-span-7">
             <div className="bg-navy-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
@@ -81,7 +81,6 @@ export default function Contact(): JSX.Element {
                 <div className="relative z-10">
                     <h2 className="text-3xl font-bold mb-2">How can we help?</h2>
                     <p className="text-gray-400 mb-8">Fill out the form and our team will get back to you within 24 hours.</p>
-                    
                     <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
@@ -93,7 +92,6 @@ export default function Contact(): JSX.Element {
                                 <input required type="text" className="w-full px-4 py-3 bg-navy-800 border border-navy-700 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-white placeholder-gray-500 hover:border-navy-600" placeholder="Acme Inc." />
                             </div>
                         </div>
-
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-gray-300">Email*</label>
@@ -122,7 +120,7 @@ export default function Contact(): JSX.Element {
                             </label>
                         </div>
 
-                        <Button fullWidth size="lg" className="bg-brand hover:bg-brand-dark text-white font-bold py-4 text-lg shadow-lg shadow-brand/25">
+                        <Button fullWidth size="lg" className="bg-violet hover:bg-brand-dark text-white font-bold py-4 text-lg shadow-lg shadow-brand/25">
                             Submit
                             <Send className="ml-2 w-5 h-5" />
                         </Button>

@@ -16,31 +16,40 @@ export const TechStack: React.FC = () => {
       </div>
       
       {/* Scrolling Marquee */}
-      <div className="relative flex overflow-x-hidden group">
-        {/* Left Fade */}
-        <div className="absolute left-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-        {/* Right Fade */}
-        <div className="absolute right-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+    <div 
+  className="relative flex overflow-x-hidden"
+  onMouseEnter={e => {
+    const track = e.currentTarget.querySelector('.slide-track') as HTMLElement;
+    if (track) track.style.animationPlayState = 'paused';
+  }}
+  onMouseLeave={e => {
+    const track = e.currentTarget.querySelector('.slide-track') as HTMLElement;
+    if (track) track.style.animationPlayState = 'running';
+  }}
+>
+  {/* Left Fade */}
+  <div className="absolute left-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+  {/* Right Fade */}
+  <div className="absolute right-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
 
-        <div className="flex animate-slide whitespace-nowrap hover:[animation-play-state:paused]">
-          {/* First Loop */}
-          {techs.map((tech, index) => (
-            <div key={index} className="mx-2 md:mx-4">
-              <span className="inline-block px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-50 border border-gray-100 text-sm md:text-lg font-semibold text-navy-800 hover:border-brand/30 hover:text-brand hover:shadow-md transition-all cursor-default">
-                {tech}
-              </span>
-            </div>
-          ))}
-          {/* Duplicate Loop */}
-          {techs.map((tech, index) => (
-            <div key={`dup-${index}`} className="mx-2 md:mx-4">
-              <span className="inline-block px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-50 border border-gray-100 text-sm md:text-lg font-semibold text-navy-800 hover:border-brand/30 hover:text-brand hover:shadow-md transition-all cursor-default">
-                {tech}
-              </span>
-            </div>
-          ))}
-        </div>
+  <div className="slide-track flex animate-slide whitespace-nowrap">
+    {techs.map((tech, index) => (
+      <div key={index} className="mx-2 md:mx-4">
+        <span className="tech-badge inline-block px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-50 border border-gray-100 text-sm md:text-lg font-semibold text-navy-800 transition-all cursor-default">
+  {tech}
+</span>
       </div>
+    ))}
+    {techs.map((tech, index) => (
+      <div key={`dup-${index}`} className="mx-2 md:mx-4">
+        <span className="tech-badge inline-block px-4 py-2 md:px-6 md:py-3 rounded-full bg-gray-50 border border-gray-100 text-sm md:text-lg font-semibold text-navy-800 transition-all cursor-default">
+  {tech}
+</span>
+       
+      </div>
+    ))}
+  </div>
+</div>
     </section>
   );
 };

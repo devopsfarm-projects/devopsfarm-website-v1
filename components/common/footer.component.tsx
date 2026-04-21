@@ -6,9 +6,10 @@ import { Map } from '@/components/Map';
 
 export const Footer: React.FC = () => {
   const { footer, general } = siteContent;
-
+console.log("footer loaded");
   return (
     <footer className="bg-white border-t border-gray-100 pt-24 pb-12">
+      
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-12 lg:gap-20 mb-20">
 
@@ -109,10 +110,15 @@ export const Footer: React.FC = () => {
                       {general.addresses[0].line2},<br />
                       {general.addresses[0].line3}
                     </span>
+ renuM
 <div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px' }}>
   <Map />
 </div>
 </div>      
+                    
+                
+                  </div>
+ main
                 </li>
               </ul>
             </div>

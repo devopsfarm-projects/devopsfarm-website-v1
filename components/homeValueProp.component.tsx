@@ -80,21 +80,22 @@ export const HomeValueProp: React.FC = () => {
                         <div className="mt-8 pt-6 border-t border-white/10">
                             <Link href="/contact">
                                 <Button
-                                    fullWidth
-                                    className="
+  fullWidth
+  className="
+    group
     bg-gradient-to-r from-violet-600 to-purple-600
     !text-white
     font-bold
     border-none
-    hover:bg-white
+    hover:from-white hover:to-white
     hover:text-violet-700
     transition-all duration-300
     shadow-lg
   "
-                                >
-                                    Schedule Technical Audit
-                                    <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                </Button>
+>
+  Schedule Technical Audit
+  <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+</Button>
                             </Link>
                         </div>
                     </div>

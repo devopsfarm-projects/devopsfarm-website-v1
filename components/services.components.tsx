@@ -31,11 +31,11 @@ export const Services: React.FC = () => {
             return (
               <div 
                 key={service.id}
-                className={`group p-4 md:p-8 bg-white border rounded-2xl transition-all duration-300 h-full flex flex-col  ${
-                  isOpen 
-                    ? 'border-brand shadow-xl ring-1 ring-brand/10' 
-                    : 'border-gray-100 hover:border-brand/30 hover:shadow-lg'
-                }`}
+               className={`group p-4 md:p-8 bg-white border rounded-2xl transition-all duration-300 h-full flex flex-col ${
+  isOpen 
+    ? 'border-brand shadow-xl ring-1 ring-brand/10' 
+    : 'border-gray-200 !hover:border-violet-500 hover:shadow-lg'
+}`}
               >
                 <Link href={`/services/${service.id}`} className="block">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-brand group-hover:text-white transition-colors duration-300">

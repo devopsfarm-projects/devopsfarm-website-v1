@@ -44,7 +44,7 @@ export const Process: React.FC = () => {
           {steps.map((step, idx) => (
             <div key={idx} className="relative pt-6 md:pt-8 group">
               {/* Step Number Line */}
-              <div className="absolute top-0 left-0 w-full h-px bg-gray-200 group-hover:bg-accent transition-colors duration-500 origin-left"></div>
+              <div className="absolute top-0 left-0 w-full h-px bg-gray-200 group-hover:bg-blue-500 transition-colors duration-500 origin-left"></div>
               <div className="absolute top-[-4px] left-0 w-2 h-2 rounded-full bg-navy-900 group-hover:bg-accent transition-colors"></div>
               
               <div className="flex flex-col items-start">

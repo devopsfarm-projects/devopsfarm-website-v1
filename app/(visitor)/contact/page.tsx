@@ -1,10 +1,13 @@
 'use client';
-import { useEffect,JSX } from 'react';
+import { useEffect, useState, JSX } from 'react';
 import { Button } from '@/components/common/button.component';
-import { MapPin, Mail, Phone, Send, Globe } from 'lucide-react';
+import { MapPin, Mail, Phone, Send, Globe, X } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
+import { Map } from '@/components/Map';
 export default function Contact(): JSX.Element {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Contact Us - DevOpsFarm";
@@ -22,7 +25,7 @@ export default function Contact(): JSX.Element {
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Contact Info & Offices */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-12 space-y-8 max-w-2xl mx-auto w-full">
              {/* Info Cards */}
              {/* <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 transition-shadow hover:shadow-md">
                 <div className="flex items-center justify-between mb-6">
@@ -56,25 +59,52 @@ export default function Contact(): JSX.Element {
                 </p>
                 <div className="flex items-center gap-3 text-gray-600 mb-6">
                     <Phone className="w-5 h-5 text-brand" />
-                    <span>+91 (800) 123-4567</span>
+                    <span>+91 9971566583</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-600 mb-6">
                     <Mail className="w-5 h-5 text-brand" />
                     <a href="mailto:query@devopsfarm.in" className="hover:text-brand transition-colors">query@devopsfarm.in</a>
                 </div>
-               <Button
-  variant="outline"
-  className="group border-gray-200 !text-navy-900 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:!text-white"
->
-  <MapPin className="w-4 h-4 text-navy-900 group-hover:!text-white transition-colors" />
-  Get Directions
-</Button>
+
+                <Button
+                    onClick={() => setIsMapOpen(true)}
+                    variant="outline"
+                    className="group border-gray-200 !text-navy-900 px-8 py-4 text-lg bg-white/25 hover:bg-navy-900 hover:!text-white w-full"
+                >
+                    <MapPin className="w-4 h-4 text-navy-900 group-hover:!text-white transition-colors" />
+                    Get Directions
+                </Button>
              </div>
           </div>
-          {/* Right Column: The Form */}
+
+          {/* Map Modal - opens only when Get Directions button is clicked */}
+          {isMapOpen && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+              onClick={() => setIsMapOpen(false)}
+            >
+              <div
+                className="bg-white rounded-2xl p-6 shadow-2xl relative max-w-md w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setIsMapOpen(false)}
+                  className="absolute top-4 right-4 text-gray-400 hover:text-navy-900 transition-colors"
+                  aria-label="Close map"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <h3 className="text-xl font-bold text-navy-900 mb-4">Our Location</h3>
+                <div className="flex justify-center">
+                  <Map />
+                </div>
+              </div>
+            </div>
+          )}
+          {/* Right Column: The Form (hidden) */}
+          {/*
           <div className="lg:col-span-7">
             <div className="bg-navy-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
-                {/* Decorative blobs */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
@@ -128,6 +158,7 @@ export default function Contact(): JSX.Element {
                 </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>

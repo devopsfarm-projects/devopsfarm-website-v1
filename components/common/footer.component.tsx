@@ -63,7 +63,6 @@ console.log("footer loaded");
                 ))}
               </ul>
             </div>
-
             {/* Company Column */}
             <div>
               <h4 className="font-bold text-navy-900 mb-8 text-sm uppercase tracking-widest">Company</h4>
@@ -113,7 +112,6 @@ console.log("footer loaded");
                     <div className="mt-4 w-full rounded-lg overflow-hidden border" style={{ height: '250px' }}>
   <Map />
 </div>
-                
                   </div>
                 </li>
               </ul>

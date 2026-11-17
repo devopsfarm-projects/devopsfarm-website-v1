@@ -18,7 +18,16 @@ const ALLOWED_ORIGINS = [
 // This is useful for initial deployment, but you should configure specific domains for security
 const isProduction = process.env.NODE_ENV === 'production';
 const allowAllOrigins = isProduction && ALLOWED_ORIGINS.length <= 2; // Only localhost entries
-
+// Requests coming from the site itself (any domain it is served on, e.g. *.vercel.app) are always fine
+function isSameOrigin(request: NextRequest, origin: string): boolean {
+  const host = request.headers.get('x-forwarded-host') || request.headers.get('host');
+  if (!host) return false;
+  try {
+    return new URL(origin).host === host;
+  } catch {
+    return false;
+  }
+}
 export default function proxy(request: NextRequest) {
   const { pathname, search, searchParams } = request.nextUrl;
   const fullUrl = request.url;
@@ -140,7 +149,7 @@ export default function proxy(request: NextRequest) {
     const csrfToken = request.headers.get('x-csrf-token');
     
     // For now, we'll just check if the origin is allowed
-    if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+    if (origin && !isSameOrigin(request, origin) && !ALLOWED_ORIGINS.includes(origin)) {
       return new NextResponse(
         JSON.stringify({
           success: false,

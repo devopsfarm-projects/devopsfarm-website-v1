@@ -11,6 +11,9 @@ import { contactService } from '@/services';
 const inputClass =
   'w-full px-4 py-3 bg-navy-800 border border-navy-700 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-white placeholder-gray-500 hover:border-navy-600';
 
+const FieldError = ({ msg }: { msg?: string }) =>
+  msg ? <p className="text-red-400 text-xs mt-1">{msg}</p> : null;
+
 export const ContactForm: React.FC = () => {
   const [status, setStatus] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
@@ -48,9 +51,6 @@ export const ContactForm: React.FC = () => {
     }
   };
 
-  const Error = ({ msg }: { msg?: string }) =>
-    msg ? <p className="text-red-400 text-xs mt-1">{msg}</p> : null;
-
   return (
     <div className="bg-navy-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden bg-black">
       <h2 className="text-3xl font-bold mb-2">How can we help?</h2>
@@ -64,12 +64,12 @@ export const ContactForm: React.FC = () => {
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-300">Name*</label>
             <input type="text" className={inputClass} placeholder="John Doe" {...register('name')} />
-            <Error msg={errors.name?.message} />
+            <FieldError msg={errors.name?.message} />
           </div>
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-300">Company*</label>
             <input type="text" className={inputClass} placeholder="Acme Inc." {...register('company')} />
-            <Error msg={errors.company?.message} />
+            <FieldError msg={errors.company?.message} />
           </div>
         </div>
 
@@ -77,25 +77,25 @@ export const ContactForm: React.FC = () => {
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-300">Email*</label>
             <input type="email" className={inputClass} placeholder="john@company.com" {...register('email')} />
-            <Error msg={errors.email?.message} />
+            <FieldError msg={errors.email?.message} />
           </div>
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-300">Phone*</label>
             <input type="tel" className={inputClass} placeholder="+91 98765 43210" {...register('phone')} />
-            <Error msg={errors.phone?.message} />
+            <FieldError msg={errors.phone?.message} />
           </div>
         </div>
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-300">Country*</label>
           <input type="text" className={inputClass} placeholder="India" {...register('country')} />
-          <Error msg={errors.country?.message} />
+          <FieldError msg={errors.country?.message} />
         </div>
 
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-300">Message</label>
           <textarea rows={4} className={inputClass} placeholder="Tell us about your project or challenge..." {...register('message')} />
-          <Error msg={errors.message?.message} />
+          <FieldError msg={errors.message?.message} />
         </div>
 
         <div>
@@ -106,7 +106,7 @@ export const ContactForm: React.FC = () => {
               <a href="/privacy-policy" className="text-brand hover:text-brand-light underline">Privacy Policy</a>.
             </label>
           </div>
-          <Error msg={errors.acceptTerms?.message} />
+          <FieldError msg={errors.acceptTerms?.message} />
         </div>
 
         {status && (

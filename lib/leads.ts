@@ -43,3 +43,38 @@ export async function saveLead(lead: LeadInput): Promise<string> {
     .insertOne({ ...lead, createdAt: new Date() });
   return result.insertedId.toString();
 }
+
+export interface LeadRecord {
+  id: string;
+  name?: string;
+  company?: string;
+  email?: string;
+  phone?: string;
+  country?: string;
+  message?: string;
+  createdAt?: string;
+}
+
+// Latest leads that came from THIS website's contact form
+// (filter on `source` so other data in the same collection is not shown).
+export async function listLeads(limit = 500): Promise<LeadRecord[]> {
+  const client = await getClient();
+  const docs = await client
+    .db(DB_NAME)
+    .collection(COLLECTION)
+    .find({ source: 'website-contact' })
+    .sort({ createdAt: -1 })
+    .limit(limit)
+    .toArray();
+
+  return docs.map((d) => ({
+    id: d._id.toString(),
+    name: d.name,
+    company: d.company,
+    email: d.email,
+    phone: d.phone,
+    country: d.country,
+    message: d.message,
+    createdAt: d.createdAt ? new Date(d.createdAt).toISOString() : undefined,
+  }));
+}

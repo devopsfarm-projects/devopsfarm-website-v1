@@ -14,9 +14,13 @@ services:
       - HOSTNAME=0.0.0.0
       - PORT=3000
       - NEXT_TELEMETRY_DISABLED=1
-      - NEXT_PUBLIC_API_URL=https://dicotr.com
-      - NEXT_PUBLIC_APP_URL=https://dicotr.com
-      - NEXT_PUBLIC_PRODUCTION_URL=https://dicotr.com
+      - NEXT_PUBLIC_API_URL=https://www.devopsfarm.in
+      - NEXT_PUBLIC_APP_URL=https://www.devopsfarm.in
+      - NEXT_PUBLIC_PRODUCTION_URL=https://www.devopsfarm.in
+      # Database (values come from .env file on the server)
+      - MONGODB_URI=${MONGODB_URI}
+      - MONGODB_DB=${MONGODB_DB:-devopsfarm}
+      - MONGODB_LEADS_COLLECTION=${MONGODB_LEADS_COLLECTION:-leads}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]

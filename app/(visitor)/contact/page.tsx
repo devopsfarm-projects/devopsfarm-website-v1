@@ -5,6 +5,7 @@ import { MapPin, Mail, Phone, Send, Globe, X } from 'lucide-react';
 import Link from 'next/link';
 import { siteContent } from '@/constants/mockData/siteContent';
 import { Map } from '@/components/Map';
+import { ContactForm } from '@/components/ContactForm';
 export default function Contact(): JSX.Element {
   const [isMapOpen, setIsMapOpen] = useState(false);
 
@@ -101,7 +102,10 @@ export default function Contact(): JSX.Element {
               </div>
             </div>
           )}
-          {/* Right Column: The Form (hidden) */}
+          {/* Contact form (saves to database via /api/contact) */}
+          <div className="lg:col-span-12 max-w-2xl mx-auto w-full">
+            <ContactForm />
+          </div>
           {/*
           <div className="lg:col-span-7">
             <div className="bg-navy-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">

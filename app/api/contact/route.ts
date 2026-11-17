@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { contactFormSchema } from '@/schemas/contactForm.schema';
 import { ZodError } from 'zod';
+import { saveLead } from '@/lib/leads';
 
 // Simple in-memory rate limiting for contact form
 const contactRateLimitStore = new Map<string, { count: number; resetTime: number }>();
@@ -55,25 +56,17 @@ export async function POST(request: NextRequest) {
     // Validate request body with Zod
     const validatedData = contactFormSchema.parse(body);
 
-    // Here you would typically:
-    // 1. Save to database
-    // 2. Send email notification
-    // 3. Integrate with CRM
-    // 4. Send to third-party service
+    // Save to database
+    const { acceptTerms, website, ...fields } = validatedData;
+    void acceptTerms;
+    void website;
 
-    // Example: Log the data (replace with actual logic)
-    console.log('Contact form submission:', validatedData);
-
-    // Simulate processing time
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    // TODO: Replace this with actual email sending or database saving
-    // Example with nodemailer or SendGrid:
-    // await sendEmail({
-    //   to: process.env.ADMIN_EMAIL,
-    //   subject: 'New Contact Form Submission',
-    //   data: validatedData
-    // });
+    const leadId = await saveLead({
+      ...fields,
+      source: 'website-contact',
+      ip: ip.split(',')[0].trim(),
+      userAgent: request.headers.get('user-agent') || undefined,
+    });
 
     return NextResponse.json(
       {
@@ -81,7 +74,7 @@ export async function POST(request: NextRequest) {
         message: 'Thank you for contacting us! We will get back to you soon.',
         data: {
           submittedAt: new Date().toISOString(),
-          id: Math.random().toString(36).substring(7), // Generate a unique ID
+          id: leadId,
         },
       },
       { status: 200 }

@@ -8,6 +8,8 @@ const ALLOWED_ORIGINS = [
   'http://localhost:3001',
   'https://dicotr.com',
   'https://www.dicotr.com',
+  'https://devopsfarm.in',
+  'https://www.devopsfarm.in',
   process.env.NEXT_PUBLIC_APP_URL,
   process.env.NEXT_PUBLIC_PRODUCTION_URL,
 ].filter(Boolean);
